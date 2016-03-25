@@ -74,81 +74,102 @@
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef GIGA_CORE_UPLOADER_H_</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GIGA_CORE_UPLOADER_H_</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;boost/filesystem.hpp&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;pplx/pplxtasks.h&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;FolderNode.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>giga</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_uploader.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(FileUploader&amp;, uint64_t count, uint64_t bytes)&gt; ProgressCallback;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_uploader.html#ae1c9974dee2d9ad31934f90ed3796b2b">Uploader</a>(<a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> parent, <span class="keyword">const</span> boost::filesystem::path&amp; path, ProgressCallback clb = [](<a class="code" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a>&amp;, uint64_t, uint64_t){});</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ~<a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a3b89c0af89848de4fb8eff16a6c6e3d3">isPreparationFinished</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::vector&lt;std::shared_ptr&lt;FileUploader&gt;&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a90fbbaa59a67bc3c20170fc2e12e1062">uploadingFiles</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;FolderNode.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;../utils/readerwriterqueue.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;boost/filesystem.hpp&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;pplx/pplxtasks.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>giga</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_uploader.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(FileUploader&amp;, uint64_t count, uint64_t bytes)&gt; ProgressUpload;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(Sha1Calculator&amp;)&gt; ProgressPreparation;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_uploader.html#a4f345ee86855f3e4f96deb8f70f6b653">Uploader</a>(ProgressUpload clbUp = [](<a class="code" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a>&amp;, uint64_t, uint64_t){},</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                      ProgressPreparation clbPrep = [](<a class="code" href="classgiga_1_1core_1_1_sha1_calculator.html">Sha1Calculator</a>&amp;){});</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ~<a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a4f345ee86855f3e4f96deb8f70f6b653">Uploader</a>(<a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp;&amp;)                 = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a4f345ee86855f3e4f96deb8f70f6b653">Uploader</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp;)            = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp; operator=(<a class="code" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>&amp;&amp;)      = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a5996ed79b8ccd05fab26010676507d99">addUpload</a>(<a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> parent, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::vector&lt;std::shared_ptr&lt;FileUploader&gt;&gt;::size_type</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#aea77648af861ecba907c8dd51713bde7">uploadingFilesCount</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    pplx::task&lt;void&gt;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a149755329f60eeabe013934bca53335a">start</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    scanFilesAddUploads (<a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&amp; parent, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::function&lt;std::shared_ptr&lt;Node&gt; (std::shared_ptr&lt;Node&gt; n)&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    startNextUpload(std::shared_ptr&lt;giga::core::FileUploader&gt; next);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a3b89c0af89848de4fb8eff16a6c6e3d3">isPreparationFinished</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::vector&lt;std::shared_ptr&lt;FileUploader&gt;&gt;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a90fbbaa59a67bc3c20170fc2e12e1062">uploadingFiles</a>();</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">typedef</span> pplx::task&lt;std::shared_ptr&lt;FileUploader&gt;&gt; PreparingEntry;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FileUploader&gt; ReadyEntry;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>                        _parent;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    boost::filesystem::path           _path;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::vector&lt;PreparingEntry&gt;       _preparingList;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    pplx::task&lt;std::shared_ptr&lt;Node&gt;&gt; _uploading;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    pplx::task&lt;void&gt;                  _mainTask;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">bool</span>                              _isStarted;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">mutable</span> std::mutex                _mut;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    std::vector&lt;ReadyEntry&gt;           _readyList;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">bool</span>                              _isPreparationFinished;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    uint64_t                          _upBytes;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    uint64_t                          _upCount;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::atomic&lt;bool&gt;                 _isFinished;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    ProgressCallback                  _progressCallback;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;} <span class="comment">/* namespace core */</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">/* namespace giga */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_UPLOADER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_ae1c9974dee2d9ad31934f90ed3796b2b"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#ae1c9974dee2d9ad31934f90ed3796b2b">giga::core::Uploader::Uploader</a></div><div class="ttdeci">Uploader(FolderNode parent, const boost::filesystem::path &amp;path, ProgressCallback clb=[](FileUploader &amp;, uint64_t, uint64_t){})</div><div class="ttdoc">construct an Uploader </div><div class="ttdef"><b>Definition:</b> Uploader.cpp:37</div></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::vector&lt;std::shared_ptr&lt;FileUploader&gt;&gt;::size_type</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#aea77648af861ecba907c8dd51713bde7">uploadingFilesCount</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a2d4e9fc1fa21f1c2d1b65fb170b55fbe">start</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_uploader.html#a73af1852283e166066ea9f33f01e9122">join</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    scanFilesAddUploads (<a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&amp; parent, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::function&lt;std::shared_ptr&lt;Node&gt; (std::shared_ptr&lt;Node&gt; n)&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    startNextUpload(std::shared_ptr&lt;giga::core::FileUploader&gt; next);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">typedef</span> std::shared_ptr&lt;FileUploader&gt; ReadyEntry;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;FolderNode, boost::filesystem::path&gt; QueueElement;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue&lt;std::unique_ptr&lt;QueueElement&gt;</a>&gt; <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>                             _queue;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    Node::UploadingFile               _preparing;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    pplx::task&lt;std::shared_ptr&lt;Node&gt;&gt; _uploading;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    pplx::task&lt;void&gt;                  _mainTask;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">bool</span>                              _isStarted;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">mutable</span> std::mutex                _mut;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    std::vector&lt;ReadyEntry&gt;           _readyList;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">bool</span>                              _isPreparationFinished;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    uint64_t                          _upBytes;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    uint64_t                          _upCount;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    std::atomic&lt;bool&gt;                 _isFinished;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    ProgressUpload                    _progressUp;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    ProgressPreparation               _progressPrep;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;} <span class="comment">/* namespace core */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_UPLOADER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classgiga_1_1core_1_1_sha1_calculator_html"><div class="ttname"><a href="classgiga_1_1core_1_1_sha1_calculator.html">giga::core::Sha1Calculator</a></div><div class="ttdef"><b>Definition:</b> Sha1Calculator.h:23</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a3b89c0af89848de4fb8eff16a6c6e3d3"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a3b89c0af89848de4fb8eff16a6c6e3d3">giga::core::Uploader::isPreparationFinished</a></div><div class="ttdeci">bool isPreparationFinished() const </div><div class="ttdoc">Tells if the preparation phase is finished. </div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_uploader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html">giga::core::Uploader</a></div><div class="ttdef"><b>Definition:</b> Uploader.h:37</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_uploader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html">giga::core::Uploader</a></div><div class="ttdef"><b>Definition:</b> Uploader.h:42</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a2d4e9fc1fa21f1c2d1b65fb170b55fbe"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a2d4e9fc1fa21f1c2d1b65fb170b55fbe">giga::core::Uploader::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">start the uploading process </div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_file_uploader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_file_uploader.html">giga::core::FileUploader</a></div><div class="ttdef"><b>Definition:</b> FileUploader.h:41</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a5996ed79b8ccd05fab26010676507d99"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a5996ed79b8ccd05fab26010676507d99">giga::core::Uploader::addUpload</a></div><div class="ttdeci">void addUpload(FolderNode parent, const boost::filesystem::path &amp;path)</div><div class="ttdoc">add a file or folder to the list of uploads </div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_uploader_html_aea77648af861ecba907c8dd51713bde7"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#aea77648af861ecba907c8dd51713bde7">giga::core::Uploader::uploadingFilesCount</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; FileUploader &gt; &gt;::size_type uploadingFilesCount()</div><div class="ttdoc">return uploadingFiles().size() </div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a90fbbaa59a67bc3c20170fc2e12e1062"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a90fbbaa59a67bc3c20170fc2e12e1062">giga::core::Uploader::uploadingFiles</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; FileUploader &gt; &gt; uploadingFiles()</div><div class="ttdoc">Gets the uploading files. </div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a149755329f60eeabe013934bca53335a"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a149755329f60eeabe013934bca53335a">giga::core::Uploader::start</a></div><div class="ttdeci">pplx::task&lt; void &gt; start()</div><div class="ttdoc">start the uploading process </div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a73af1852283e166066ea9f33f01e9122"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a73af1852283e166066ea9f33f01e9122">giga::core::Uploader::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">wait for the uploading process to finish </div></div>
+<div class="ttc" id="classmoodycamel_1_1_blocking_reader_writer_queue_html"><div class="ttname"><a href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue</a></div><div class="ttdef"><b>Definition:</b> readerwriterqueue.h:640</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_uploader_html_a4f345ee86855f3e4f96deb8f70f6b653"><div class="ttname"><a href="classgiga_1_1core_1_1_uploader.html#a4f345ee86855f3e4f96deb8f70f6b653">giga::core::Uploader::Uploader</a></div><div class="ttdeci">Uploader(ProgressUpload clbUp=[](FileUploader &amp;, uint64_t, uint64_t){}, ProgressPreparation clbPrep=[](Sha1Calculator &amp;){})</div><div class="ttdoc">construct an Uploader </div><div class="ttdef"><b>Definition:</b> Uploader.cpp:41</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_folder_node_html"><div class="ttname"><a href="classgiga_1_1core_1_1_folder_node.html">giga::core::FolderNode</a></div><div class="ttdef"><b>Definition:</b> FolderNode.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
@@ -159,7 +180,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

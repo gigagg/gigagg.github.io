@@ -67,17 +67,35 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a679a1d9bb98b0b39e1b5f799b3988ab9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a679a1d9bb98b0b39e1b5f799b3988ab9"></a>
+<tr class="memitem:a1a28ca45da08328aaeb9ddee20d325de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a28ca45da08328aaeb9ddee20d325de"></a>
 typedef std::function&lt; void(<a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a> <br class="typebreak"/>
 &amp;, uint64_t count, uint64_t <br class="typebreak"/>
-bytes)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressCallback</b></td></tr>
-<tr class="separator:a679a1d9bb98b0b39e1b5f799b3988ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+bytes)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressUpload</b></td></tr>
+<tr class="separator:a1a28ca45da08328aaeb9ddee20d325de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f9f687b7e67c7a97c40a4ab2706d24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73f9f687b7e67c7a97c40a4ab2706d24"></a>
+typedef std::function&lt; void(<a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html">Sha1Calculator</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressPreparation</b></td></tr>
+<tr class="separator:a73f9f687b7e67c7a97c40a4ab2706d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1c9974dee2d9ad31934f90ed3796b2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#ae1c9974dee2d9ad31934f90ed3796b2b">Uploader</a> (<a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> parent, const boost::filesystem::path &amp;path, ProgressCallback clb=[](<a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a> &amp;, uint64_t, uint64_t){})</td></tr>
-<tr class="memdesc:ae1c9974dee2d9ad31934f90ed3796b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct an <a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>  <a href="#ae1c9974dee2d9ad31934f90ed3796b2b">More...</a><br/></td></tr>
-<tr class="separator:ae1c9974dee2d9ad31934f90ed3796b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f345ee86855f3e4f96deb8f70f6b653"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a4f345ee86855f3e4f96deb8f70f6b653">Uploader</a> (ProgressUpload clbUp=[](<a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a> &amp;, uint64_t, uint64_t){}, ProgressPreparation clbPrep=[](<a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html">Sha1Calculator</a> &amp;){})</td></tr>
+<tr class="memdesc:a4f345ee86855f3e4f96deb8f70f6b653"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct an <a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a>  <a href="#a4f345ee86855f3e4f96deb8f70f6b653">More...</a><br/></td></tr>
+<tr class="separator:a4f345ee86855f3e4f96deb8f70f6b653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86806a8b5822aa42ccaed15c313dfe21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86806a8b5822aa42ccaed15c313dfe21"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Uploader</b> (<a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a86806a8b5822aa42ccaed15c313dfe21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5f8169b9d1712f62276a23e4748b3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f5f8169b9d1712f62276a23e4748b3b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Uploader</b> (const <a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;)=delete</td></tr>
+<tr class="separator:a1f5f8169b9d1712f62276a23e4748b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4adc43ec0d244a8f90776d9da816d95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4adc43ec0d244a8f90776d9da816d95"></a>
+<a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;)=delete</td></tr>
+<tr class="separator:ac4adc43ec0d244a8f90776d9da816d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab094d7dfe6363a0036f9484f3d80c49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab094d7dfe6363a0036f9484f3d80c49"></a>
+<a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:aab094d7dfe6363a0036f9484f3d80c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5996ed79b8ccd05fab26010676507d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a5996ed79b8ccd05fab26010676507d99">addUpload</a> (<a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> parent, const boost::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:a5996ed79b8ccd05fab26010676507d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a file or folder to the list of uploads  <a href="#a5996ed79b8ccd05fab26010676507d99">More...</a><br/></td></tr>
+<tr class="separator:a5996ed79b8ccd05fab26010676507d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b89c0af89848de4fb8eff16a6c6e3d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a3b89c0af89848de4fb8eff16a6c6e3d3">isPreparationFinished</a> () const </td></tr>
 <tr class="memdesc:a3b89c0af89848de4fb8eff16a6c6e3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells if the preparation phase is finished.  <a href="#a3b89c0af89848de4fb8eff16a6c6e3d3">More...</a><br/></td></tr>
 <tr class="separator:a3b89c0af89848de4fb8eff16a6c6e3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,14 +108,20 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a> &gt; &gt;::size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#aea77648af861ecba907c8dd51713bde7">uploadingFilesCount</a> ()</td></tr>
 <tr class="memdesc:aea77648af861ecba907c8dd51713bde7"><td class="mdescLeft">&#160;</td><td class="mdescRight">return <code><a class="el" href="classgiga_1_1core_1_1_uploader.html#a90fbbaa59a67bc3c20170fc2e12e1062" title="Gets the uploading files. ">uploadingFiles()</a>.size()</code> <br/></td></tr>
 <tr class="separator:aea77648af861ecba907c8dd51713bde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a149755329f60eeabe013934bca53335a"><td class="memItemLeft" align="right" valign="top">pplx::task&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a149755329f60eeabe013934bca53335a">start</a> ()</td></tr>
-<tr class="memdesc:a149755329f60eeabe013934bca53335a"><td class="mdescLeft">&#160;</td><td class="mdescRight">start the uploading process  <a href="#a149755329f60eeabe013934bca53335a">More...</a><br/></td></tr>
-<tr class="separator:a149755329f60eeabe013934bca53335a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4e9fc1fa21f1c2d1b65fb170b55fbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d4e9fc1fa21f1c2d1b65fb170b55fbe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a2d4e9fc1fa21f1c2d1b65fb170b55fbe">start</a> ()</td></tr>
+<tr class="memdesc:a2d4e9fc1fa21f1c2d1b65fb170b55fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">start the uploading process <br/></td></tr>
+<tr class="separator:a2d4e9fc1fa21f1c2d1b65fb170b55fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73af1852283e166066ea9f33f01e9122"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73af1852283e166066ea9f33f01e9122"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_uploader.html#a73af1852283e166066ea9f33f01e9122">join</a> ()</td></tr>
+<tr class="memdesc:a73af1852283e166066ea9f33f01e9122"><td class="mdescLeft">&#160;</td><td class="mdescRight">wait for the uploading process to finish <br/></td></tr>
+<tr class="separator:a73af1852283e166066ea9f33f01e9122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Upload files and folders. </p>
+<div class="textblock"><p>Upload files and folders.</p>
+<p>Start the upload process with the <code><a class="el" href="classgiga_1_1core_1_1_uploader.html#a2d4e9fc1fa21f1c2d1b65fb170b55fbe" title="start the uploading process ">Uploader::start()</a></code> method. Uses <code><a class="el" href="classgiga_1_1core_1_1_uploader.html#a5996ed79b8ccd05fab26010676507d99" title="add a file or folder to the list of uploads ">Uploader::addUpload()</a></code> to add file/folder to upload. Terminate the uploading process using the <code><a class="el" href="classgiga_1_1core_1_1_uploader.html#a73af1852283e166066ea9f33f01e9122" title="wait for the uploading process to finish ">Uploader::join()</a></code> method. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae1c9974dee2d9ad31934f90ed3796b2b"></a>
+<a class="anchor" id="a4f345ee86855f3e4f96deb8f70f6b653"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -107,20 +131,14 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
         <tr>
           <td class="memname">giga::core::Uploader::Uploader </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
+          <td class="paramtype">ProgressUpload&#160;</td>
+          <td class="paramname"><em>clbUp</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a>&amp;,&#160;uint64_t,&#160;uint64_t){}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ProgressCallback&#160;</td>
-          <td class="paramname"><em>clb</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a>&amp;,&#160;uint64_t,&#160;uint64_t){}</code>&#160;</td>
+          <td class="paramtype">ProgressPreparation&#160;</td>
+          <td class="paramname"><em>clbPrep</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html">Sha1Calculator</a>&amp;){}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -138,9 +156,8 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
 <p>construct an <a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>the folder in which we want to upload data </td></tr>
-    <tr><td class="paramname">path</td><td>the path to the file or folder we want to upload </td></tr>
-    <tr><td class="paramname">clb</td><td>a callback function that will be called periodically to let you know of the upload progress</td></tr>
+    <tr><td class="paramname">clbUp</td><td>a callback function that will be called periodically to let you know of the upload progress </td></tr>
+    <tr><td class="paramname">clbPrep</td><td>a callback function that will be called periodically to let you know of the preparation progress (sha1)</td></tr>
   </table>
   </dd>
 </dl>
@@ -149,6 +166,41 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5996ed79b8ccd05fab26010676507d99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void giga::core::Uploader::addUpload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add a file or folder to the list of uploads </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>the folder in which we want to upload data </td></tr>
+    <tr><td class="paramname">path</td><td>the path to the file or folder we want to upload </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a3b89c0af89848de4fb8eff16a6c6e3d3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -164,27 +216,6 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
 
 <p>Tells if the preparation phase is finished. </p>
 <p>Before uploading a file, we need to calculate its sha1. This phase is called the preparation phase. </p>
-
-</div>
-</div>
-<a class="anchor" id="a149755329f60eeabe013934bca53335a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pplx::task&lt;void&gt; giga::core::Uploader::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>start the uploading process </p>
-<dl class="section return"><dt>Returns</dt><dd>a task </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="https://github.com/Microsoft/cpprestsdk">https://github.com/Microsoft/cpprestsdk</a> </dd>
-<dd>
-<a href="http://microsoft.github.io/cpprestsdk/classpplx_1_1task_3_01void_01_4.html">http://microsoft.github.io/cpprestsdk/classpplx_1_1task_3_01void_01_4.html</a> </dd></dl>
 
 </div>
 </div>
@@ -220,7 +251,7 @@ std::vector&lt; std::shared_ptr<br class="typebreak"/>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -65,6 +65,8 @@
   <tr><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#a9fbb24b121f58b40e0a2e399b0eb6178">addChildFolder</a>(const utility::string_t &amp;name)=0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ancestors</b>() const  (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>create</b>(std::shared_ptr&lt; data::Node &gt; n) (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>create</b>(const Node &amp;n) (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#afa66be0bc694b11c0901e2874c20294e">createChildFolder</a>(const utility::string_t &amp;name) const =0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>creationDate</b>() const  (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#a51c77c1b26e5c80a34f4c71932a0e310">download</a>(const utility::string_t &amp;destinationPath, FileDownloader::Policy policy=FileDownloader::Policy::ignore)=0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#a4a679120b1ac04174d12e79197942713">fileData</a>() const =0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
@@ -90,8 +92,9 @@
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>type</b>() const  (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>Type</b> enum name (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>typeCvrt</b> (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#abdd7ed8bb6d83b360b95d9cd1f29425a">uploadFile</a>(const utility::string_t &amp;filepath)=0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Node</b>()=default (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html#a97c9519941c3f8873ea750ca31268db7">uploadFile</a>(const utility::string_t &amp;filepath)=0</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>UploadingFile</b> typedef (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Node</b>()=default (defined in <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a>)</td><td class="entry"><a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -101,7 +104,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

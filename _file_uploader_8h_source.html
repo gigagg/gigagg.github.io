@@ -104,44 +104,44 @@
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> pplx::task&lt;std::shared_ptr&lt;Node&gt;&gt;&amp;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_file_uploader.html#a3ddb3c02bf4058303d574725ac967f06">task</a> () <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_file_uploader.html#a2f444f66dd785785b38e66e90f291d3e">progress</a> () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> utility::string_t&amp;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    nodeName() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">const</span> utility::string_t&amp;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    fileName() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    uint64_t</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    fileSize() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    doStart () <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    pplx::task&lt;std::shared_ptr&lt;Node&gt;&gt; _task;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    utility::string_t _filename;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    utility::string_t _nodeName;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string       _parentId;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string       _sha1;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::string       _fid;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    std::string       _fkey;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    uint64_t _fileSize;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;} <span class="comment">/* namespace api */</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">/* namespace giga */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_API_FILEUPLOADER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_file_uploader.html#a2f444f66dd785785b38e66e90f291d3e">progress</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> utility::string_t&amp;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    nodeName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> utility::string_t&amp;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    fileName() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    uint64_t</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    fileSize() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    doStart () <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    pplx::task&lt;std::shared_ptr&lt;Node&gt;&gt; _task;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    utility::string_t _filename;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    utility::string_t _nodeName;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::string       _parentId;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string       _sha1;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string       _fid;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string       _fkey;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    uint64_t _fileSize;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">/* namespace api */</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_API_FILEUPLOADER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classgiga_1_1core_1_1_file_uploader_html_a3ddb3c02bf4058303d574725ac967f06"><div class="ttname"><a href="classgiga_1_1core_1_1_file_uploader.html#a3ddb3c02bf4058303d574725ac967f06">giga::core::FileUploader::task</a></div><div class="ttdeci">const pplx::task&lt; std::shared_ptr&lt; Node &gt; &gt; &amp; task() const </div><div class="ttdoc">Gets the task managing the upload process. Make sure you have started the upload before calling this ...</div><div class="ttdef"><b>Definition:</b> FileUploader.cpp:145</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_file_uploader_html_a2f444f66dd785785b38e66e90f291d3e"><div class="ttname"><a href="classgiga_1_1core_1_1_file_uploader.html#a2f444f66dd785785b38e66e90f291d3e">giga::core::FileUploader::progress</a></div><div class="ttdeci">FileTransferer::Progress progress() const </div><div class="ttdoc">Gets this upload progress. </div><div class="ttdef"><b>Definition:</b> FileUploader.cpp:151</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_file_uploader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_file_uploader.html">giga::core::FileUploader</a></div><div class="ttdef"><b>Definition:</b> FileUploader.h:41</div></div>
-<div class="ttc" id="structgiga_1_1core_1_1_file_transferer_1_1_progress_html"><div class="ttname"><a href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">giga::core::FileTransferer::Progress</a></div><div class="ttdef"><b>Definition:</b> FileTransferer.h:41</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_file_transferer_html"><div class="ttname"><a href="classgiga_1_1core_1_1_file_transferer.html">giga::core::FileTransferer</a></div><div class="ttdef"><b>Definition:</b> FileTransferer.h:35</div></div>
+<div class="ttc" id="structgiga_1_1core_1_1_file_transferer_1_1_progress_html"><div class="ttname"><a href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">giga::core::FileTransferer::Progress</a></div><div class="ttdef"><b>Definition:</b> FileTransferer.h:42</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_file_transferer_html"><div class="ttname"><a href="classgiga_1_1core_1_1_file_transferer.html">giga::core::FileTransferer</a></div><div class="ttdef"><b>Definition:</b> FileTransferer.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -151,7 +151,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

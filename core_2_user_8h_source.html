@@ -221,142 +221,143 @@
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        uint64_t</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        maxContact() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_contact_data.html#a9d9c8c12f206e604e12c5fd409b79c31">node</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&amp;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_contact_data.html#a0d61b64bfd058a28d5abc742a184213d">node</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        std::shared_ptr&lt;data::User&gt; _data;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    };</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">  206</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a> {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">friend</span> <a class="code" href="classgiga_1_1core_1_1_user.html">User</a>;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">friend</span> <a class="code" href="classgiga_1_1core_1_1_user_relation.html">UserRelation</a>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        ~<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>()                              = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;&amp;)                 = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;)            = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp; operator=(<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;&amp;)      = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(std::shared_ptr&lt;data::User&gt; u, <span class="keyword">const</span> utility::string_t&amp; password);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        ReportedState</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        reportedState() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        isEmailValidated() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">const</span> utility::string_t&amp;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        email() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keyword">const</span> utility::string_t&amp;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        nextEmail() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">const</span> std::string&amp;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        nodeKeyClear() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        uint64_t</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        maxStorage() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        uint64_t</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        standatdMaxStorage() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        uint64_t</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        downloaded() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        uint64_t</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        dlAvailable() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">//        ExternalAccount</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">//        externalAccount() const;</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">//        Offer</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">//        offer() const;</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        std::shared_ptr&lt;data::User&gt; _data;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        std::string                 _nodeKeyClear;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="classgiga_1_1_rsa.html">Rsa</a>                         _rsaKeys;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    };</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a870bb2ca2aedcaedd1887e1bd9155517">hasContactData</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_1_1_contact_data.html">ContactData</a>&amp;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#abc58249bab75f2f5f9244033532da1a7">contactData</a>();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a91c5d5ca35fbd97916d1156eb65084a2">hasPersonalData</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#ae4c476d049d10b89fb406bbed7f9bf7c">personalData</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">bool</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a2484203cc4dec8f3f09aee8930e57eae">hasRelation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_relation.html">UserRelation</a></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a542076f5de9cc4ad9a6d4384a50ede14">relation</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">// Setters</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a723fd9032fcd30370f27103e1f2f5583">invite</a>();</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#adbbd36c904607d73466ad2f056c8b22d">block</a>();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#af3a99bf6a4c6fe573bb059cf872fdf5a">acceptInvitation</a>();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#ae660e6d4a449bef10e43f9a53667f324">suggest</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user.html">User</a>&amp; contact);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a1ad132ff31034f6b27b96a18b20e2a03">removeRelation</a>();</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgiga_1_1_application.html">giga::Application</a>; <span class="comment">// core::User&amp; Application::authenticate (const utility::string_t&amp;, const utility::string_t&amp;);</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    initializePersonalData (<span class="keyword">const</span> utility::string_t&amp; password);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    std::shared_ptr&lt;data::User&gt;          _data;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    std::shared_ptr&lt;data::UsersRelation&gt; _relation;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    boost::optional&lt;PersonalData&gt;        _private;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    boost::optional&lt;ContactData&gt;         _protected;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    boost::optional&lt;giga::Rsa&gt;           _publicKey;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;};</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;} <span class="comment">/* namespace core */</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;} <span class="comment">/* namespace giga */</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_USER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_adbbd36c904607d73466ad2f056c8b22d"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#adbbd36c904607d73466ad2f056c8b22d">giga::core::User::block</a></div><div class="ttdeci">User block()</div><div class="ttdoc">The currentUser blocks this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:374</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_ae660e6d4a449bef10e43f9a53667f324"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#ae660e6d4a449bef10e43f9a53667f324">giga::core::User::suggest</a></div><div class="ttdeci">void suggest(const User &amp;contact)</div><div class="ttdoc">Suggest contact to this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:382</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a870bb2ca2aedcaedd1887e1bd9155517"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a870bb2ca2aedcaedd1887e1bd9155517">giga::core::User::hasContactData</a></div><div class="ttdeci">bool hasContactData() const </div><div class="ttdef"><b>Definition:</b> User.cpp:296</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_1_1_personal_data_html"><div class="ttname"><a href="classgiga_1_1core_1_1_user_1_1_personal_data.html">giga::core::User::PersonalData</a></div><div class="ttdef"><b>Definition:</b> User.h:206</div></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>                  _root;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    };</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">  207</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a> {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">friend</span> <a class="code" href="classgiga_1_1core_1_1_user.html">User</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">friend</span> <a class="code" href="classgiga_1_1core_1_1_user_relation.html">UserRelation</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        ~<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>()                              = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;&amp;)                 = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;)            = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp; operator=(<a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;&amp;)      = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>(std::shared_ptr&lt;data::User&gt; u, <span class="keyword">const</span> utility::string_t&amp; password);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        ReportedState</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        reportedState() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        isEmailValidated() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">const</span> utility::string_t&amp;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        email() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keyword">const</span> utility::string_t&amp;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        nextEmail() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">const</span> std::string&amp;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        nodeKeyClear() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        uint64_t</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        maxStorage() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        uint64_t</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        standatdMaxStorage() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        uint64_t</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        downloaded() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        uint64_t</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        dlAvailable() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">//        ExternalAccount</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">//        externalAccount() const;</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">//        Offer</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">//        offer() const;</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        std::shared_ptr&lt;data::User&gt; _data;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        std::string                 _nodeKeyClear;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <a class="code" href="classgiga_1_1_rsa.html">Rsa</a>                         _rsaKeys;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    };</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a870bb2ca2aedcaedd1887e1bd9155517">hasContactData</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_1_1_contact_data.html">ContactData</a>&amp;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#abc58249bab75f2f5f9244033532da1a7">contactData</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a91c5d5ca35fbd97916d1156eb65084a2">hasPersonalData</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#ae4c476d049d10b89fb406bbed7f9bf7c">personalData</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">bool</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a2484203cc4dec8f3f09aee8930e57eae">hasRelation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_relation.html">UserRelation</a></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a542076f5de9cc4ad9a6d4384a50ede14">relation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="comment">// Setters</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a723fd9032fcd30370f27103e1f2f5583">invite</a>();</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#adbbd36c904607d73466ad2f056c8b22d">block</a>();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html">User</a></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#af3a99bf6a4c6fe573bb059cf872fdf5a">acceptInvitation</a>();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#ae660e6d4a449bef10e43f9a53667f324">suggest</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_user.html">User</a>&amp; contact);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user.html#a1ad132ff31034f6b27b96a18b20e2a03">removeRelation</a>();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgiga_1_1_application.html">giga::Application</a>; <span class="comment">// core::User&amp; Application::authenticate (const utility::string_t&amp;, const utility::string_t&amp;);</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_user_1_1_personal_data.html">PersonalData</a>&amp;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    initializePersonalData (<span class="keyword">const</span> utility::string_t&amp; password);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    std::shared_ptr&lt;data::User&gt;          _data;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    std::shared_ptr&lt;data::UsersRelation&gt; _relation;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    boost::optional&lt;PersonalData&gt;        _private;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    boost::optional&lt;ContactData&gt;         _protected;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    boost::optional&lt;giga::Rsa&gt;           _publicKey;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;};</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;} <span class="comment">/* namespace core */</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_USER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_adbbd36c904607d73466ad2f056c8b22d"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#adbbd36c904607d73466ad2f056c8b22d">giga::core::User::block</a></div><div class="ttdeci">User block()</div><div class="ttdoc">The currentUser blocks this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:375</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_ae660e6d4a449bef10e43f9a53667f324"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#ae660e6d4a449bef10e43f9a53667f324">giga::core::User::suggest</a></div><div class="ttdeci">void suggest(const User &amp;contact)</div><div class="ttdoc">Suggest contact to this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:383</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a870bb2ca2aedcaedd1887e1bd9155517"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a870bb2ca2aedcaedd1887e1bd9155517">giga::core::User::hasContactData</a></div><div class="ttdeci">bool hasContactData() const </div><div class="ttdef"><b>Definition:</b> User.cpp:297</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_1_1_personal_data_html"><div class="ttname"><a href="classgiga_1_1core_1_1_user_1_1_personal_data.html">giga::core::User::PersonalData</a></div><div class="ttdef"><b>Definition:</b> User.h:207</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_1_1_contact_data_html_a0d61b64bfd058a28d5abc742a184213d"><div class="ttname"><a href="classgiga_1_1core_1_1_user_1_1_contact_data.html#a0d61b64bfd058a28d5abc742a184213d">giga::core::User::ContactData::node</a></div><div class="ttdeci">const FolderNode &amp; node() const </div><div class="ttdef"><b>Definition:</b> User.cpp:206</div></div>
 <div class="ttc" id="structgiga_1_1core_1_1_language_html"><div class="ttname"><a href="structgiga_1_1core_1_1_language.html">giga::core::Language</a></div><div class="ttdef"><b>Definition:</b> User.h:62</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_user_relation_html"><div class="ttname"><a href="classgiga_1_1core_1_1_user_relation.html">giga::core::UserRelation</a></div><div class="ttdef"><b>Definition:</b> UserRelation.h:43</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_1_1_contact_data_html_a9d9c8c12f206e604e12c5fd409b79c31"><div class="ttname"><a href="classgiga_1_1core_1_1_user_1_1_contact_data.html#a9d9c8c12f206e604e12c5fd409b79c31">giga::core::User::ContactData::node</a></div><div class="ttdeci">FolderNode node() const </div><div class="ttdef"><b>Definition:</b> User.cpp:205</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a2484203cc4dec8f3f09aee8930e57eae"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a2484203cc4dec8f3f09aee8930e57eae">giga::core::User::hasRelation</a></div><div class="ttdeci">bool hasRelation() const </div><div class="ttdef"><b>Definition:</b> User.cpp:344</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_ae4c476d049d10b89fb406bbed7f9bf7c"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#ae4c476d049d10b89fb406bbed7f9bf7c">giga::core::User::personalData</a></div><div class="ttdeci">const PersonalData &amp; personalData() const </div><div class="ttdoc">Get the personal data of the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:332</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_af3a99bf6a4c6fe573bb059cf872fdf5a"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#af3a99bf6a4c6fe573bb059cf872fdf5a">giga::core::User::acceptInvitation</a></div><div class="ttdeci">User acceptInvitation()</div><div class="ttdoc">Accept an invitation received from this user to the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:388</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_abc58249bab75f2f5f9244033532da1a7"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#abc58249bab75f2f5f9244033532da1a7">giga::core::User::contactData</a></div><div class="ttdeci">ContactData &amp; contactData()</div><div class="ttdoc">Get the data shared by this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:302</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a1ad132ff31034f6b27b96a18b20e2a03"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a1ad132ff31034f6b27b96a18b20e2a03">giga::core::User::removeRelation</a></div><div class="ttdeci">void removeRelation()</div><div class="ttdoc">Remove a relation. Make sure this user hasRelation() const </div><div class="ttdef"><b>Definition:</b> User.cpp:401</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a2484203cc4dec8f3f09aee8930e57eae"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a2484203cc4dec8f3f09aee8930e57eae">giga::core::User::hasRelation</a></div><div class="ttdeci">bool hasRelation() const </div><div class="ttdef"><b>Definition:</b> User.cpp:345</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_ae4c476d049d10b89fb406bbed7f9bf7c"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#ae4c476d049d10b89fb406bbed7f9bf7c">giga::core::User::personalData</a></div><div class="ttdeci">const PersonalData &amp; personalData() const </div><div class="ttdoc">Get the personal data of the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:333</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_af3a99bf6a4c6fe573bb059cf872fdf5a"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#af3a99bf6a4c6fe573bb059cf872fdf5a">giga::core::User::acceptInvitation</a></div><div class="ttdeci">User acceptInvitation()</div><div class="ttdoc">Accept an invitation received from this user to the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:389</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_abc58249bab75f2f5f9244033532da1a7"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#abc58249bab75f2f5f9244033532da1a7">giga::core::User::contactData</a></div><div class="ttdeci">ContactData &amp; contactData()</div><div class="ttdoc">Get the data shared by this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:303</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a1ad132ff31034f6b27b96a18b20e2a03"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a1ad132ff31034f6b27b96a18b20e2a03">giga::core::User::removeRelation</a></div><div class="ttdeci">void removeRelation()</div><div class="ttdoc">Remove a relation. Make sure this user hasRelation() const </div><div class="ttdef"><b>Definition:</b> User.cpp:402</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_user_html_abd045e87142d9818af79e1f453b8bab0"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#abd045e87142d9818af79e1f453b8bab0">giga::core::User::tags</a></div><div class="ttdeci">const std::vector&lt; utility::string_t &gt; &amp; tags() const </div><div class="ttdef"><b>Definition:</b> User.cpp:132</div></div>
 <div class="ttc" id="classgiga_1_1_rsa_html"><div class="ttname"><a href="classgiga_1_1_rsa.html">giga::Rsa</a></div><div class="ttdef"><b>Definition:</b> Crypto.h:27</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_country_html"><div class="ttname"><a href="classgiga_1_1core_1_1_country.html">giga::core::Country</a></div><div class="ttdef"><b>Definition:</b> User.h:45</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_user_html_a6bd792a8b671f9d933c71cca6919f3b6"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a6bd792a8b671f9d933c71cca6919f3b6">giga::core::User::isSeeder</a></div><div class="ttdeci">SeederStatus isSeeder() const </div><div class="ttdef"><b>Definition:</b> User.cpp:118</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a542076f5de9cc4ad9a6d4384a50ede14"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a542076f5de9cc4ad9a6d4384a50ede14">giga::core::User::relation</a></div><div class="ttdeci">UserRelation relation() const </div><div class="ttdoc">Get the UserRelation data between this user and the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:350</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a542076f5de9cc4ad9a6d4384a50ede14"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a542076f5de9cc4ad9a6d4384a50ede14">giga::core::User::relation</a></div><div class="ttdeci">UserRelation relation() const </div><div class="ttdoc">Get the UserRelation data between this user and the currentUser. </div><div class="ttdef"><b>Definition:</b> User.cpp:351</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_user_1_1_contact_data_html"><div class="ttname"><a href="classgiga_1_1core_1_1_user_1_1_contact_data.html">giga::core::User::ContactData</a></div><div class="ttdef"><b>Definition:</b> User.h:166</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_user_html"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html">giga::core::User</a></div><div class="ttdoc">A user with an account on GiGa.GG. Cf: https://giga.gg/users/profile/1704781. </div><div class="ttdef"><b>Definition:</b> User.h:79</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_folder_node_html"><div class="ttname"><a href="classgiga_1_1core_1_1_folder_node.html">giga::core::FolderNode</a></div><div class="ttdef"><b>Definition:</b> FolderNode.h:27</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a91c5d5ca35fbd97916d1156eb65084a2"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a91c5d5ca35fbd97916d1156eb65084a2">giga::core::User::hasPersonalData</a></div><div class="ttdeci">bool hasPersonalData() const </div><div class="ttdef"><b>Definition:</b> User.cpp:314</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_user_html_a723fd9032fcd30370f27103e1f2f5583"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a723fd9032fcd30370f27103e1f2f5583">giga::core::User::invite</a></div><div class="ttdeci">User invite()</div><div class="ttdoc">Send an invitation from the currentUser to this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:360</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a91c5d5ca35fbd97916d1156eb65084a2"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a91c5d5ca35fbd97916d1156eb65084a2">giga::core::User::hasPersonalData</a></div><div class="ttdeci">bool hasPersonalData() const </div><div class="ttdef"><b>Definition:</b> User.cpp:315</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_user_html_a723fd9032fcd30370f27103e1f2f5583"><div class="ttname"><a href="classgiga_1_1core_1_1_user.html#a723fd9032fcd30370f27103e1f2f5583">giga::core::User::invite</a></div><div class="ttdeci">User invite()</div><div class="ttdoc">Send an invitation from the currentUser to this user. </div><div class="ttdef"><b>Definition:</b> User.cpp:361</div></div>
 <div class="ttc" id="classgiga_1_1_application_html"><div class="ttname"><a href="classgiga_1_1_application.html">giga::Application</a></div><div class="ttdef"><b>Definition:</b> Application.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
@@ -367,7 +368,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

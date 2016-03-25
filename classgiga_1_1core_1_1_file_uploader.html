@@ -92,8 +92,9 @@ Public Member Functions</h2></td></tr>
 &lt; std::shared_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_uploader.html#a3ddb3c02bf4058303d574725ac967f06">task</a> () const </td></tr>
 <tr class="memdesc:a3ddb3c02bf4058303d574725ac967f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the task managing the upload process. Make sure you have started the upload before calling this method.  <a href="#a3ddb3c02bf4058303d574725ac967f06">More...</a><br/></td></tr>
 <tr class="separator:a3ddb3c02bf4058303d574725ac967f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f444f66dd785785b38e66e90f291d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_uploader.html#a2f444f66dd785785b38e66e90f291d3e">progress</a> () const </td></tr>
-<tr class="memdesc:a2f444f66dd785785b38e66e90f291d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this upload progress.  <a href="#a2f444f66dd785785b38e66e90f291d3e">More...</a><br/></td></tr>
+<tr class="memitem:a2f444f66dd785785b38e66e90f291d3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f444f66dd785785b38e66e90f291d3e"></a>
+<a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_uploader.html#a2f444f66dd785785b38e66e90f291d3e">progress</a> () const </td></tr>
+<tr class="memdesc:a2f444f66dd785785b38e66e90f291d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets this upload progress. <br/></td></tr>
 <tr class="separator:a2f444f66dd785785b38e66e90f291d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7c57bf94464a5970376bee9df2dd0ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7c57bf94464a5970376bee9df2dd0ea"></a>
 const utility::string_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>nodeName</b> () const </td></tr>
@@ -133,6 +134,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_transferer.html#aa5a0994956661590b0fa9fdfcf2b41c1">cancel</a> ()</td></tr>
 <tr class="memdesc:aa5a0994956661590b0fa9fdfcf2b41c1 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a started upload. The task managing the transfer will most probably throw an exception. <br/></td></tr>
 <tr class="separator:aa5a0994956661590b0fa9fdfcf2b41c1 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c110501e246f09a783d7efc315389f inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8c110501e246f09a783d7efc315389f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setError</b> (const std::string &amp;error)</td></tr>
+<tr class="separator:aa8c110501e246f09a783d7efc315389f inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca570532c3f876d7dcde1f28c17ef62 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca570532c3f876d7dcde1f28c17ef62"></a>
 State&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> () const </td></tr>
 <tr class="separator:a8ca570532c3f876d7dcde1f28c17ef62 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,10 +153,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>doStart</b> () overri
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classgiga_1_1core_1_1_file_transferer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgiga_1_1core_1_1_file_transferer')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classgiga_1_1core_1_1_file_transferer.html">giga::core::FileTransferer</a></td></tr>
-<tr class="memitem:a55723694ba6d0ca3b2e358f93af9c312 inherit pub_types_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <b>pending</b>, 
+<tr class="memitem:a55723694ba6d0ca3b2e358f93af9c312 inherit pub_types_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <br/>
+&#160;&#160;<b>pending</b>, 
 <b>started</b>, 
 <b>paused</b>, 
-<b>canceled</b>
+<b>canceled</b>, 
+<br/>
+&#160;&#160;<b>error</b>
+<br/>
  }</td></tr>
 <tr class="separator:a55723694ba6d0ca3b2e358f93af9c312 inherit pub_types_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classgiga_1_1core_1_1_file_transferer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classgiga_1_1core_1_1_file_transferer')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classgiga_1_1core_1_1_file_transferer.html">giga::core::FileTransferer</a></td></tr>
@@ -169,30 +177,15 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_mut</b></td></
 <tr class="memitem:a14f267724f6b40c461c1f8eaf583ab0a inherit pro_attribs_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14f267724f6b40c461c1f8eaf583ab0a"></a>
 pplx::cancellation_token_source&#160;</td><td class="memItemRight" valign="bottom"><b>_cts</b></td></tr>
 <tr class="separator:a14f267724f6b40c461c1f8eaf583ab0a inherit pro_attribs_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2addcf93decf01edfe6819dc27cf7e07 inherit pro_attribs_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2addcf93decf01edfe6819dc27cf7e07"></a>
+utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>_error</b></td></tr>
+<tr class="separator:a2addcf93decf01edfe6819dc27cf7e07 inherit pro_attribs_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Upload a file.</p>
 <p>REMEMBER: Before uploading a file, we need to calculate its sha1. It is a long running process, that we call the preparing phase.</p>
 <p>After the preparing phase, we test to see if the file already exists in GiGa.GG. If it does, the uploading process is skipped (we use the one already in GiGa.GG) </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2f444f66dd785785b38e66e90f291d3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a> giga::core::FileUploader::progress </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets this upload progress. </p>
-<p>For now there is no means to know the progression of the preparing phase. </p>
-
-</div>
-</div>
 <a class="anchor" id="a3ddb3c02bf4058303d574725ac967f06"></a>
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +221,7 @@ pplx::cancellation_token_source&#160;</td><td class="memItemRight" valign="botto
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

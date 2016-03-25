@@ -79,64 +79,80 @@
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>giga</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>core</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>FileDownloader;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>Node;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_downloader.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> final</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(FileDownloader&amp;, uint64_t count, uint64_t bytes)&gt; ProgressCallback;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html#ab0ec938b9c8692f87c8344573412b2bd">Downloader</a>(std::unique_ptr&lt;Node&gt;&amp;&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path, ProgressCallback clb = [](<a class="code" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&amp;, uint64_t, uint64_t){});</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ~<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#ab0ec938b9c8692f87c8344573412b2bd">Downloader</a>(<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;&amp;)                 = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#ab0ec938b9c8692f87c8344573412b2bd">Downloader</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;)            = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp; operator=(<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;&amp;)      = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::shared_ptr&lt;FileDownloader&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">downloadingFile</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    uint64_t</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">downloadingFileNumber</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    pplx::task&lt;void&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#ac75d421e199d271fbeff1bf2737ceb2d">start</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../utils/readerwriterqueue.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>giga</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>core</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">class </span>FileDownloader;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>Node;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classgiga_1_1core_1_1_downloader.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> final</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(FileDownloader&amp;, uint64_t count, uint64_t bytes)&gt; ProgressCallback;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">Downloader</a>(ProgressCallback clb = [](<a class="code" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&amp;, uint64_t, uint64_t){});</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ~<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">Downloader</a>(<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;&amp;)                 = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">Downloader</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;)            = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp; operator=(<a class="code" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>&amp;&amp;)      = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a2944ba0b9ec87f16d2d285bfe77851b6">addDownload</a>(std::unique_ptr&lt;Node&gt;&amp;&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::shared_ptr&lt;FileDownloader&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">downloadingFile</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    uint64_t</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">downloadingFileNumber</a>();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    downloadFile (<a class="code" href="classgiga_1_1core_1_1_node.html">Node</a>&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    std::unique_ptr&lt;Node&gt;           _node;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    boost::filesystem::path         _path;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::shared_ptr&lt;FileDownloader&gt; _downloading;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    uint64_t                        _dlCount;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    uint64_t                        _dlBytes;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    pplx::task&lt;void&gt;                _mainTask;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::atomic&lt;bool&gt;               _isFinished;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">mutable</span> std::mutex              _mut;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ProgressCallback                _progressCallback;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#ac89b0c83e01800be79c50d3156b94415">start</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classgiga_1_1core_1_1_downloader.html#a62dc5215ef135a48250b5fda6edf9570">join</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    downloadFile (<a class="code" href="classgiga_1_1core_1_1_node.html">Node</a>&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">/* namespace core */</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">/* namespace giga */</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_DOWNLOADER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_ac75d421e199d271fbeff1bf2737ceb2d"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#ac75d421e199d271fbeff1bf2737ceb2d">giga::core::Downloader::start</a></div><div class="ttdeci">pplx::task&lt; void &gt; start()</div><div class="ttdoc">start the downloads </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:72</div></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;std::unique_ptr&lt;Node&gt;, <span class="keyword">const</span> boost::filesystem::path&gt; QueueElement;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue&lt;std::unique_ptr&lt;QueueElement&gt;</a>&gt; <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>                           _queue;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">bool</span>                            _isStarted;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::unique_ptr&lt;Node&gt;           _node;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    boost::filesystem::path         _path;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::shared_ptr&lt;FileDownloader&gt; _downloading;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    uint64_t                        _dlCount;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    uint64_t                        _dlBytes;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    pplx::task&lt;void&gt;                _mainTask;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::atomic&lt;bool&gt;               _isFinished;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">mutable</span> std::mutex              _mut;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    ProgressCallback                _progressCallback;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <span class="comment">/* namespace core */</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_DOWNLOADER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classgiga_1_1core_1_1_file_downloader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_file_downloader.html">giga::core::FileDownloader</a></div><div class="ttdef"><b>Definition:</b> FileDownloader.h:36</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_downloader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html">giga::core::Downloader</a></div><div class="ttdef"><b>Definition:</b> Downloader.h:36</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_node_html"><div class="ttname"><a href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></div><div class="ttdef"><b>Definition:</b> Node.h:47</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_acedf4ab273371b76d15d5939438d10ff"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">giga::core::Downloader::downloadingFileNumber</a></div><div class="ttdeci">uint64_t downloadingFileNumber()</div><div class="ttdef"><b>Definition:</b> Downloader.cpp:65</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a8e757a3853c5b1c54a3125b3fd1af79e"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">giga::core::Downloader::downloadingFile</a></div><div class="ttdeci">std::shared_ptr&lt; FileDownloader &gt; downloadingFile()</div><div class="ttdoc">Gets the current FileDownloader. </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:58</div></div>
-<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_ab0ec938b9c8692f87c8344573412b2bd"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#ab0ec938b9c8692f87c8344573412b2bd">giga::core::Downloader::Downloader</a></div><div class="ttdeci">Downloader(std::unique_ptr&lt; Node &gt; &amp;&amp;node, const boost::filesystem::path &amp;path, ProgressCallback clb=[](FileDownloader &amp;, uint64_t, uint64_t){})</div><div class="ttdoc">construct a Downloader </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:40</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html">giga::core::Downloader</a></div><div class="ttdef"><b>Definition:</b> Downloader.h:37</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_node_html"><div class="ttname"><a href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></div><div class="ttdef"><b>Definition:</b> Node.h:49</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_acedf4ab273371b76d15d5939438d10ff"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">giga::core::Downloader::downloadingFileNumber</a></div><div class="ttdeci">uint64_t downloadingFileNumber()</div><div class="ttdef"><b>Definition:</b> Downloader.cpp:77</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_ac89b0c83e01800be79c50d3156b94415"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#ac89b0c83e01800be79c50d3156b94415">giga::core::Downloader::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">start the uploading process </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:84</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a8e757a3853c5b1c54a3125b3fd1af79e"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">giga::core::Downloader::downloadingFile</a></div><div class="ttdeci">std::shared_ptr&lt; FileDownloader &gt; downloadingFile()</div><div class="ttdoc">Gets the current FileDownloader. </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:70</div></div>
+<div class="ttc" id="classmoodycamel_1_1_blocking_reader_writer_queue_html"><div class="ttname"><a href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue</a></div><div class="ttdef"><b>Definition:</b> readerwriterqueue.h:640</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a33f1d2f454b900cac975ade1cf109555"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">giga::core::Downloader::Downloader</a></div><div class="ttdeci">Downloader(ProgressCallback clb=[](FileDownloader &amp;, uint64_t, uint64_t){})</div><div class="ttdoc">construct a Downloader </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:42</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a2944ba0b9ec87f16d2d285bfe77851b6"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a2944ba0b9ec87f16d2d285bfe77851b6">giga::core::Downloader::addDownload</a></div><div class="ttdeci">void addDownload(std::unique_ptr&lt; Node &gt; &amp;&amp;node, const boost::filesystem::path &amp;path)</div><div class="ttdoc">add a file or folder to the list of download </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:124</div></div>
+<div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a62dc5215ef135a48250b5fda6edf9570"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a62dc5215ef135a48250b5fda6edf9570">giga::core::Downloader::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">wait for the uploading process to finish </div><div class="ttdef"><b>Definition:</b> Downloader.cpp:113</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -146,7 +162,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

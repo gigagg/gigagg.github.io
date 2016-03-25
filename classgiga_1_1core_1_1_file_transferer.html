@@ -75,6 +75,7 @@ Inheritance diagram for giga::core::FileTransferer:</div>
   <map id="giga::core::FileTransferer_map" name="giga::core::FileTransferer_map">
 <area href="classgiga_1_1core_1_1_file_downloader.html" alt="giga::core::FileDownloader" shape="rect" coords="0,56,163,80"/>
 <area href="classgiga_1_1core_1_1_file_uploader.html" alt="giga::core::FileUploader" shape="rect" coords="173,56,336,80"/>
+<area href="classgiga_1_1core_1_1_sha1_calculator.html" alt="giga::core::Sha1Calculator" shape="rect" coords="346,56,509,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -85,10 +86,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a55723694ba6d0ca3b2e358f93af9c312"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <b>pending</b>, 
+<tr class="memitem:a55723694ba6d0ca3b2e358f93af9c312"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>State</b> { <br/>
+&#160;&#160;<b>pending</b>, 
 <b>started</b>, 
 <b>paused</b>, 
-<b>canceled</b>
+<b>canceled</b>, 
+<br/>
+&#160;&#160;<b>error</b>
+<br/>
  }</td></tr>
 <tr class="separator:a55723694ba6d0ca3b2e358f93af9c312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -122,6 +127,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_transferer.html#aa5a0994956661590b0fa9fdfcf2b41c1">cancel</a> ()</td></tr>
 <tr class="memdesc:aa5a0994956661590b0fa9fdfcf2b41c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel a started upload. The task managing the transfer will most probably throw an exception. <br/></td></tr>
 <tr class="separator:aa5a0994956661590b0fa9fdfcf2b41c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c110501e246f09a783d7efc315389f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8c110501e246f09a783d7efc315389f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setError</b> (const std::string &amp;error)</td></tr>
+<tr class="separator:aa8c110501e246f09a783d7efc315389f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca570532c3f876d7dcde1f28c17ef62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca570532c3f876d7dcde1f28c17ef62"></a>
 State&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> () const </td></tr>
 <tr class="separator:a8ca570532c3f876d7dcde1f28c17ef62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +158,9 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>_mut</b></td></
 <tr class="memitem:a14f267724f6b40c461c1f8eaf583ab0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14f267724f6b40c461c1f8eaf583ab0a"></a>
 pplx::cancellation_token_source&#160;</td><td class="memItemRight" valign="bottom"><b>_cts</b></td></tr>
 <tr class="separator:a14f267724f6b40c461c1f8eaf583ab0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2addcf93decf01edfe6819dc27cf7e07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2addcf93decf01edfe6819dc27cf7e07"></a>
+utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>_error</b></td></tr>
+<tr class="separator:a2addcf93decf01edfe6819dc27cf7e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classgiga_1_1core_1_1_file_transferer.html">FileTransferer</a> can be a FileDownload or a FileUpload. </p>
@@ -191,7 +202,7 @@ pplx::cancellation_token_source&#160;</td><td class="memItemRight" valign="botto
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

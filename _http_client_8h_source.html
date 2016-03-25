@@ -158,10 +158,10 @@
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    pplx::task&lt;std::shared_ptr&lt;T&gt;&gt;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    request (<span class="keyword">const</span> web::http::method &amp;mtd, web::uri_builder uri, U&amp;&amp; bodyData)</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        GIGA_DEBUG_LOG(mtd &lt;&lt; U(<span class="stringliteral">&quot;  &quot;</span>) &lt;&lt; uri.to_string());</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">auto</span> json      = web::json::value::object();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">auto</span> data      = <a class="code" href="classgiga_1_1_j_son_serializer.html">JSonSerializer</a>{json}.toString(std::move(bodyData));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">auto</span> uriString = uri.to_string();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">auto</span> json      = web::json::value::object();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">auto</span> data      = <a class="code" href="classgiga_1_1_j_son_serializer.html">JSonSerializer</a>{json}.toString(std::move(bodyData));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">auto</span> uriString = uri.to_string();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        GIGA_DEBUG_LOG(mtd &lt;&lt; U(<span class="stringliteral">&quot;  &quot;</span>) &lt;&lt; uri.to_string() &lt;&lt; U(<span class="stringliteral">&quot; &quot;</span>) &lt;&lt; data);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> refreshToken().then([=]() {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">return</span> _http.request(mtd, uriString, data, JSON_CONTENT_TYPE).then([=](web::http::http_response response) {</div>
@@ -225,7 +225,7 @@
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}  <span class="comment">// namespace giga</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HTTPCLIENT_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classgiga_1_1_j_son_serializer_html"><div class="ttname"><a href="classgiga_1_1_j_son_serializer.html">giga::JSonSerializer</a></div><div class="ttdef"><b>Definition:</b> JsonSerializer.h:90</div></div>
+<div class="ttc" id="classgiga_1_1_j_son_serializer_html"><div class="ttname"><a href="classgiga_1_1_j_son_serializer.html">giga::JSonSerializer</a></div><div class="ttdef"><b>Definition:</b> JsonSerializer.h:93</div></div>
 <div class="ttc" id="classgiga_1_1_http_client_html"><div class="ttname"><a href="classgiga_1_1_http_client.html">giga::HttpClient</a></div><div class="ttdef"><b>Definition:</b> HttpClient.h:31</div></div>
 <div class="ttc" id="classgiga_1_1_j_son_unserializer_html"><div class="ttname"><a href="classgiga_1_1_j_son_unserializer.html">giga::JSonUnserializer</a></div><div class="ttdef"><b>Definition:</b> JsonUnserializer.h:109</div></div>
 <div class="ttc" id="classgiga_1_1_http_error_html"><div class="ttname"><a href="classgiga_1_1_http_error.html">giga::HttpError</a></div><div class="ttdef"><b>Definition:</b> HttpErrors.h:94</div></div>
@@ -239,7 +239,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

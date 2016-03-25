@@ -75,9 +75,9 @@ bytes)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressCallbac
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab0ec938b9c8692f87c8344573412b2bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ab0ec938b9c8692f87c8344573412b2bd">Downloader</a> (std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &amp;&amp;node, const boost::filesystem::path &amp;path, ProgressCallback clb=[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &amp;, uint64_t, uint64_t){})</td></tr>
-<tr class="memdesc:ab0ec938b9c8692f87c8344573412b2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>  <a href="#ab0ec938b9c8692f87c8344573412b2bd">More...</a><br/></td></tr>
-<tr class="separator:ab0ec938b9c8692f87c8344573412b2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f1d2f454b900cac975ade1cf109555"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">Downloader</a> (ProgressCallback clb=[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &amp;, uint64_t, uint64_t){})</td></tr>
+<tr class="memdesc:a33f1d2f454b900cac975ade1cf109555"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>  <a href="#a33f1d2f454b900cac975ade1cf109555">More...</a><br/></td></tr>
+<tr class="separator:a33f1d2f454b900cac975ade1cf109555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a4ec6486127c15f4712009173fa5a3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a4ec6486127c15f4712009173fa5a3f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Downloader</b> (<a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a2a4ec6486127c15f4712009173fa5a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,19 +90,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c9dfd24f78db5454ecebb259c182e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c9dfd24f78db5454ecebb259c182e41"></a>
 <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a1c9dfd24f78db5454ecebb259c182e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a2944ba0b9ec87f16d2d285bfe77851b6">addDownload</a> (std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &amp;&amp;node, const boost::filesystem::path &amp;path)</td></tr>
+<tr class="memdesc:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a file or folder to the list of download  <a href="#a2944ba0b9ec87f16d2d285bfe77851b6">More...</a><br/></td></tr>
+<tr class="separator:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">downloadingFile</a> ()</td></tr>
 <tr class="memdesc:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>.  <a href="#a8e757a3853c5b1c54a3125b3fd1af79e">More...</a><br/></td></tr>
 <tr class="separator:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acedf4ab273371b76d15d5939438d10ff"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">downloadingFileNumber</a> ()</td></tr>
 <tr class="separator:acedf4ab273371b76d15d5939438d10ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac75d421e199d271fbeff1bf2737ceb2d"><td class="memItemLeft" align="right" valign="top">pplx::task&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ac75d421e199d271fbeff1bf2737ceb2d">start</a> ()</td></tr>
-<tr class="memdesc:ac75d421e199d271fbeff1bf2737ceb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">start the downloads  <a href="#ac75d421e199d271fbeff1bf2737ceb2d">More...</a><br/></td></tr>
-<tr class="separator:ac75d421e199d271fbeff1bf2737ceb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89b0c83e01800be79c50d3156b94415"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89b0c83e01800be79c50d3156b94415"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ac89b0c83e01800be79c50d3156b94415">start</a> ()</td></tr>
+<tr class="memdesc:ac89b0c83e01800be79c50d3156b94415"><td class="mdescLeft">&#160;</td><td class="mdescRight">start the uploading process <br/></td></tr>
+<tr class="separator:ac89b0c83e01800be79c50d3156b94415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dc5215ef135a48250b5fda6edf9570"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62dc5215ef135a48250b5fda6edf9570"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a62dc5215ef135a48250b5fda6edf9570">join</a> ()</td></tr>
+<tr class="memdesc:a62dc5215ef135a48250b5fda6edf9570"><td class="mdescLeft">&#160;</td><td class="mdescRight">wait for the uploading process to finish <br/></td></tr>
+<tr class="separator:a62dc5215ef135a48250b5fda6edf9570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Download folders and files. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab0ec938b9c8692f87c8344573412b2bd"></a>
+<a class="anchor" id="a33f1d2f454b900cac975ade1cf109555"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -112,25 +120,9 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">giga::core::Downloader::Downloader </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>node</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">Downloader::ProgressCallback&#160;</td>
-          <td class="paramname"><em>clb</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&amp;,&#160;uint64_t,&#160;uint64_t){}</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>clb</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&amp;,&#160;uint64_t,&#160;uint64_t){}</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -143,8 +135,6 @@ Public Member Functions</h2></td></tr>
 <p>construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>move here the node you want to download. It can either be a <a class="el" href="classgiga_1_1core_1_1_file_node.html">FileNode</a> or a <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>. </td></tr>
-    <tr><td class="paramname">path</td><td>the path to a folder where you want <code>node</code> to be downloaded. </td></tr>
     <tr><td class="paramname">clb</td><td>a callback function that will be executed periodically to let you know of the download progress.</td></tr>
   </table>
   </dd>
@@ -154,6 +144,41 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2944ba0b9ec87f16d2d285bfe77851b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void giga::core::Downloader::addDownload </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add a file or folder to the list of download </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>move here the node you want to download. It can either be a <code><a class="el" href="classgiga_1_1core_1_1_file_node.html">FileNode</a></code> or a <code><a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a></code>. </td></tr>
+    <tr><td class="paramname">path</td><td>the path to a folder where you want <code>node</code> to be downloaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a8e757a3853c5b1c54a3125b3fd1af79e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -189,27 +214,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac75d421e199d271fbeff1bf2737ceb2d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">pplx::task&lt; void &gt; giga::core::Downloader::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>start the downloads </p>
-<dl class="section return"><dt>Returns</dt><dd>a task </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a href="https://github.com/Microsoft/cpprestsdk">https://github.com/Microsoft/cpprestsdk</a> </dd>
-<dd>
-<a href="http://microsoft.github.io/cpprestsdk/classpplx_1_1task_3_01void_01_4.html">http://microsoft.github.io/cpprestsdk/classpplx_1_1task_3_01void_01_4.html</a> </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/thomas/code/GiGaSdk/src/giga/core/<a class="el" href="_downloader_8h_source.html">Downloader.h</a></li>
 <li>/home/thomas/code/GiGaSdk/src/giga/core/Downloader.cpp</li>
@@ -223,7 +227,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 11 2016 17:53:54 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
