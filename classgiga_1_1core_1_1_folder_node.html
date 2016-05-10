@@ -85,9 +85,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d2acc07eb31ec50976274b68f1cde8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d2acc07eb31ec50976274b68f1cde8a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FolderNode</b> (const <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> &amp;other)</td></tr>
 <tr class="separator:a9d2acc07eb31ec50976274b68f1cde8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0fab30c885eae9f172fcd4af4cab6ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0fab30c885eae9f172fcd4af4cab6ad"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FolderNode</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n)</td></tr>
-<tr class="separator:aa0fab30c885eae9f172fcd4af4cab6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0cdb5bebed5655cc47464a70d48bc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a0cdb5bebed5655cc47464a70d48bc6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FolderNode</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n, const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;app)</td></tr>
+<tr class="separator:a5a0cdb5bebed5655cc47464a70d48bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12b051e966b2c137d65390e57fac0f98"><td class="memItemLeft" align="right" valign="top">virtual const std::vector<br class="typebreak"/>
 &lt; std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_folder_node.html#a12b051e966b2c137d65390e57fac0f98">getChildren</a> () const override</td></tr>
 <tr class="memdesc:a12b051e966b2c137d65390e57fac0f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the children node if needed then return them. The children nodes are stored in a local cache variable.  <a href="#a12b051e966b2c137d65390e57fac0f98">More...</a><br/></td></tr>
@@ -98,9 +98,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87a4a125cbca8f7e7fbe27d6a1ee8623"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_folder_node.html#a87a4a125cbca8f7e7fbe27d6a1ee8623">createChildFolder</a> (const utility::string_t &amp;name) const override</td></tr>
 <tr class="memdesc:a87a4a125cbca8f7e7fbe27d6a1ee8623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a> (Do not add it to the local children list)  <a href="#a87a4a125cbca8f7e7fbe27d6a1ee8623">More...</a><br/></td></tr>
 <tr class="separator:a87a4a125cbca8f7e7fbe27d6a1ee8623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3715daffac0e944fefa8e30019a04a7d"><td class="memItemLeft" align="right" valign="top">virtual UploadingFile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_folder_node.html#a3715daffac0e944fefa8e30019a04a7d">uploadFile</a> (const utility::string_t &amp;filepath) override</td></tr>
-<tr class="memdesc:a3715daffac0e944fefa8e30019a04a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload a file into this <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>.  <a href="#a3715daffac0e944fefa8e30019a04a7d">More...</a><br/></td></tr>
-<tr class="separator:a3715daffac0e944fefa8e30019a04a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6864e6904333e3ce2738d1fb0c4a72f6"><td class="memItemLeft" align="right" valign="top">virtual UploadingFile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_folder_node.html#a6864e6904333e3ce2738d1fb0c4a72f6">uploadFile</a> (const boost::filesystem::path &amp;filepath, pplx::cancellation_token_source cts=pplx::cancellation_token_source{}) override</td></tr>
+<tr class="memdesc:a6864e6904333e3ce2738d1fb0c4a72f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload a file into this <a class="el" href="classgiga_1_1core_1_1_folder_node.html">FolderNode</a>.  <a href="#a6864e6904333e3ce2738d1fb0c4a72f6">More...</a><br/></td></tr>
+<tr class="separator:a6864e6904333e3ce2738d1fb0c4a72f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a896c7383a84a6de3024f77f9ef804e84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_folder_node.html#a896c7383a84a6de3024f77f9ef804e84">download</a> (const utility::string_t &amp;destinationPath, <a class="el" href="classgiga_1_1core_1_1_file_downloader.html#ab3a79e2b29259a382b7bc5eda23ac110">FileDownloader::Policy</a> policy=<a class="el" href="classgiga_1_1core_1_1_file_downloader.html#ab3a79e2b29259a382b7bc5eda23ac110a567bc1d268f135496de3d5b946b691f3">FileDownloader::Policy::ignore</a>) override</td></tr>
 <tr class="memdesc:a896c7383a84a6de3024f77f9ef804e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download a <a class="el" href="classgiga_1_1core_1_1_file_node.html">FileNode</a>.  <a href="#a896c7383a84a6de3024f77f9ef804e84">More...</a><br/></td></tr>
 <tr class="separator:a896c7383a84a6de3024f77f9ef804e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +159,9 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const
 <tr class="memitem:af38bb1c760c344e5c79742550c9bb555 inherit pub_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top">const utility::string_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_node.html#af38bb1c760c344e5c79742550c9bb555">rename</a> (const utility::string_t &amp;name)</td></tr>
 <tr class="memdesc:af38bb1c760c344e5c79742550c9bb555 inherit pub_methods_classgiga_1_1core_1_1_node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename this node.  <a href="#af38bb1c760c344e5c79742550c9bb555">More...</a><br/></td></tr>
 <tr class="separator:af38bb1c760c344e5c79742550c9bb555 inherit pub_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09bf62c99fb047fe0844d1280c179c83 inherit pub_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09bf62c99fb047fe0844d1280c179c83"></a>
+const std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>handle</b> () const </td></tr>
+<tr class="separator:a09bf62c99fb047fe0844d1280c179c83 inherit pub_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -187,12 +190,12 @@ typedef std::unique_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classgiga_1_1core_1_1_file_uploader.html">FileUploader</a> &gt; &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>UploadingFile</b></td></tr>
 <tr class="separator:a1024d9e47f28b1a8c7be94f7c3fdd7bb inherit pub_types_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classgiga_1_1core_1_1_node"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classgiga_1_1core_1_1_node')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td></tr>
-<tr class="memitem:a2bb2018cc9bfc6795896d9f0f7628a63 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bb2018cc9bfc6795896d9f0f7628a63"></a>
-static std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n)</td></tr>
-<tr class="separator:a2bb2018cc9bfc6795896d9f0f7628a63 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb4da1f55543bec8065bc96b470f2cad inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb4da1f55543bec8065bc96b470f2cad"></a>
-static std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &amp;n)</td></tr>
-<tr class="separator:acb4da1f55543bec8065bc96b470f2cad inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1eb9a9a5161b71e16ce44055464331 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e1eb9a9a5161b71e16ce44055464331"></a>
+static std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n, const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;app)</td></tr>
+<tr class="separator:a4e1eb9a9a5161b71e16ce44055464331 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2914b75af89379d8e7e5f11b94c6eb7 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2914b75af89379d8e7e5f11b94c6eb7"></a>
+static std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (const <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &amp;node)</td></tr>
+<tr class="separator:aa2914b75af89379d8e7e5f11b94c6eb7 inherit pub_static_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classgiga_1_1core_1_1_node"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classgiga_1_1core_1_1_node')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td></tr>
 <tr class="memitem:ae91449cf6c7829f660ed916971ca6ff3 inherit pub_static_attribs_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top">static const <br class="typebreak"/>
 <a class="el" href="classgiga_1_1utils_1_1_enum_convertor.html">utils::EnumConvertor</a><br class="typebreak"/>
@@ -203,13 +206,16 @@ static std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">
 &lt; MediaType, 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mediaTypeCvrt</b></td></tr>
 <tr class="separator:a22efd95105b56213a4ca587a02b00eab inherit pub_static_attribs_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classgiga_1_1core_1_1_node"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classgiga_1_1core_1_1_node')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td></tr>
-<tr class="memitem:ad0253b3b6c06cb0faabb4273b8d9a145 inherit pro_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0253b3b6c06cb0faabb4273b8d9a145"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n)</td></tr>
-<tr class="separator:ad0253b3b6c06cb0faabb4273b8d9a145 inherit pro_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f420d12d0a2a2eb08c714896e96a7b3 inherit pro_methods_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f420d12d0a2a2eb08c714896e96a7b3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; n, const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;app)</td></tr>
+<tr class="separator:a4f420d12d0a2a2eb08c714896e96a7b3 inherit pro_methods_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classgiga_1_1core_1_1_node"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classgiga_1_1core_1_1_node')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classgiga_1_1core_1_1_node.html">giga::core::Node</a></td></tr>
 <tr class="memitem:a569f99c0e9ec432ed6582510cea441f8 inherit pro_attribs_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569f99c0e9ec432ed6582510cea441f8"></a>
 std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_data</b></td></tr>
 <tr class="separator:a569f99c0e9ec432ed6582510cea441f8 inherit pro_attribs_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb716aa0f1add6264d2f4c33b632020b inherit pro_attribs_classgiga_1_1core_1_1_node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb716aa0f1add6264d2f4c33b632020b"></a>
+const <a class="el" href="classgiga_1_1_application.html">Application</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_app</b></td></tr>
+<tr class="separator:adb716aa0f1add6264d2f4c33b632020b inherit pro_attribs_classgiga_1_1core_1_1_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2051a1c41beb8ffe59ef73ce6b6ac1b4"></a>
@@ -402,7 +408,7 @@ std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::
 
 </div>
 </div>
-<a class="anchor" id="a3715daffac0e944fefa8e30019a04a7d"></a>
+<a class="anchor" id="a6864e6904333e3ce2738d1fb0c4a72f6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -412,9 +418,19 @@ std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::
         <tr>
           <td class="memname">Node::UploadingFile giga::core::FolderNode::uploadFile </td>
           <td>(</td>
-          <td class="paramtype">const utility::string_t &amp;&#160;</td>
-          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td class="paramtype">const boost::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">pplx::cancellation_token_source&#160;</td>
+          <td class="paramname"><em>cts</em> = <code>pplx::cancellation_token_source{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -440,7 +456,7 @@ std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classgiga_1_1core_1_1_uploader.html">Uploader</a> to upload folders. </dd></dl>
 
-<p>Implements <a class="el" href="classgiga_1_1core_1_1_node.html#a97c9519941c3f8873ea750ca31268db7">giga::core::Node</a>.</p>
+<p>Implements <a class="el" href="classgiga_1_1core_1_1_node.html#acfbce0fe85e527f28f3402e23ca8dff3">giga::core::Node</a>.</p>
 
 </div>
 </div>
@@ -457,7 +473,7 @@ std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

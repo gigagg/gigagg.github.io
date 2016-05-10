@@ -78,23 +78,29 @@
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;cpprest/details/basic_types.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../../rest/prepoc_manage.h&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="struct_locale.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_locale.html">Locale</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    utility::string_t contryCode  = U(<span class="stringliteral">&quot;FR&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    utility::string_t countryName = {};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    utility::string_t currency    = {};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    boost::optional&lt;utility::string_t&gt; ip = boost::none;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Unserializer&gt;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> visit(<span class="keyword">const</span> Unserializer&amp; us){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        us.manageOpt(contryCode, utility::string_t(U(<span class="stringliteral">&quot;contryCode&quot;</span>)), utility::string_t(U(<span class="stringliteral">&quot;FR&quot;</span>)));</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        us.manageOpt(countryName, utility::string_t(U(<span class="stringliteral">&quot;countryName&quot;</span>)), utility::string_t(U(<span class="stringliteral">&quot;France&quot;</span>)));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        us.manage(currency, utility::string_t(U(<span class="stringliteral">&quot;currency&quot;</span>)));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        us.manage(ip, utility::string_t(U(<span class="stringliteral">&quot;ip&quot;</span>)));</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LOCALE_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="struct_locale_html"><div class="ttname"><a href="struct_locale.html">Locale</a></div><div class="ttdef"><b>Definition:</b> Locale.h:24</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>giga {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>data {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structgiga_1_1data_1_1_locale.html">   27</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structgiga_1_1data_1_1_locale.html">Locale</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    utility::string_t contryCode  = U(<span class="stringliteral">&quot;FR&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    utility::string_t countryName = {};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    utility::string_t currency    = {};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    boost::optional&lt;utility::string_t&gt; ip = boost::none;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Unserializer&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> visit(<span class="keyword">const</span> Unserializer&amp; us){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        us.manageOpt(contryCode, utility::string_t(U(<span class="stringliteral">&quot;contryCode&quot;</span>)), utility::string_t(U(<span class="stringliteral">&quot;FR&quot;</span>)));</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        us.manageOpt(countryName, utility::string_t(U(<span class="stringliteral">&quot;countryName&quot;</span>)), utility::string_t(U(<span class="stringliteral">&quot;France&quot;</span>)));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        us.manage(currency, utility::string_t(U(<span class="stringliteral">&quot;currency&quot;</span>)));</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        us.manage(ip, utility::string_t(U(<span class="stringliteral">&quot;ip&quot;</span>)));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LOCALE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structgiga_1_1data_1_1_locale_html"><div class="ttname"><a href="structgiga_1_1data_1_1_locale.html">giga::data::Locale</a></div><div class="ttdef"><b>Definition:</b> Locale.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->
@@ -104,7 +110,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:07 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

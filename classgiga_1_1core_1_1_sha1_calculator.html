@@ -59,7 +59,7 @@
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classgiga_1_1core_1_1_sha1_calculator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">giga::core::Sha1Calculator Class Reference</div>  </div>
+<div class="title">giga::core::Sha1Calculator Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -74,9 +74,9 @@ Inheritance diagram for giga::core::Sha1Calculator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a629bf4b3f6f5faf25780ae3fabadd25f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a629bf4b3f6f5faf25780ae3fabadd25f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sha1Calculator</b> (const utility::string_t &amp;filename)</td></tr>
-<tr class="separator:a629bf4b3f6f5faf25780ae3fabadd25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3b7bedc0ddc421537862c7f4019aa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe3b7bedc0ddc421537862c7f4019aa0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Sha1Calculator</b> (const boost::filesystem::path &amp;filename, pplx::cancellation_token_source cts=pplx::cancellation_token_source{})</td></tr>
+<tr class="separator:abe3b7bedc0ddc421537862c7f4019aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d662178c56aec6a1bf53aa6c254105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d662178c56aec6a1bf53aa6c254105"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Sha1Calculator</b> (<a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html">Sha1Calculator</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a58d662178c56aec6a1bf53aa6c254105"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,14 +89,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e0d1a9e8c829b5b026ea4a03e6a6a0c"><td class="memItemLeft" align="right" valign="top">const pplx::task&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html#a0e0d1a9e8c829b5b026ea4a03e6a6a0c">task</a> () const </td></tr>
 <tr class="memdesc:a0e0d1a9e8c829b5b026ea4a03e6a6a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the task managing the sha1 calculation process. Make sure you have started the sha1 calculation before calling this method.  <a href="#a0e0d1a9e8c829b5b026ea4a03e6a6a0c">More...</a><br/></td></tr>
 <tr class="separator:a0e0d1a9e8c829b5b026ea4a03e6a6a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dcbf0aacc2cd44192bb6e5dc3a3a753"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dcbf0aacc2cd44192bb6e5dc3a3a753"></a>
-<a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html#a7dcbf0aacc2cd44192bb6e5dc3a3a753">progress</a> () const </td></tr>
-<tr class="memdesc:a7dcbf0aacc2cd44192bb6e5dc3a3a753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the progress of the sha1 calculation. <br/></td></tr>
-<tr class="separator:a7dcbf0aacc2cd44192bb6e5dc3a3a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a456d5d996f128b27dc60b6a43af4588d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a456d5d996f128b27dc60b6a43af4588d"></a>
-const utility::string_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>fileName</b> () const </td></tr>
-<tr class="separator:a456d5d996f128b27dc60b6a43af4588d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26eb319ef8d3e1af9bf9aa7b548736be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26eb319ef8d3e1af9bf9aa7b548736be"></a>
+<a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_sha1_calculator.html#a26eb319ef8d3e1af9bf9aa7b548736be">progress</a> () const override</td></tr>
+<tr class="memdesc:a26eb319ef8d3e1af9bf9aa7b548736be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the progress of the sha1 calculation. <br/></td></tr>
+<tr class="separator:a26eb319ef8d3e1af9bf9aa7b548736be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62b36c7aae9c2faff0ec3221f8d2153"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae62b36c7aae9c2faff0ec3221f8d2153"></a>
+const boost::filesystem::path &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> () const override</td></tr>
+<tr class="separator:ae62b36c7aae9c2faff0ec3221f8d2153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgiga_1_1core_1_1_file_transferer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgiga_1_1core_1_1_file_transferer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgiga_1_1core_1_1_file_transferer.html">giga::core::FileTransferer</a></td></tr>
+<tr class="memitem:a12521e70580abef87e64b3e2aa7634c9 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12521e70580abef87e64b3e2aa7634c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FileTransferer</b> (pplx::cancellation_token_source cts)</td></tr>
+<tr class="separator:a12521e70580abef87e64b3e2aa7634c9 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a646beceb6f21ba288fa96de36d406571 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a646beceb6f21ba288fa96de36d406571"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FileTransferer</b> (<a class="el" href="classgiga_1_1core_1_1_file_transferer.html">FileTransferer</a> &amp;&amp;other)</td></tr>
 <tr class="separator:a646beceb6f21ba288fa96de36d406571 inherit pub_methods_classgiga_1_1core_1_1_file_transferer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,7 +211,7 @@ utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>_error</
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

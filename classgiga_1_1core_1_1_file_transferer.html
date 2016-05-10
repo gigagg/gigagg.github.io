@@ -99,6 +99,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a12521e70580abef87e64b3e2aa7634c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12521e70580abef87e64b3e2aa7634c9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FileTransferer</b> (pplx::cancellation_token_source cts)</td></tr>
+<tr class="separator:a12521e70580abef87e64b3e2aa7634c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a646beceb6f21ba288fa96de36d406571"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a646beceb6f21ba288fa96de36d406571"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FileTransferer</b> (<a class="el" href="classgiga_1_1core_1_1_file_transferer.html">FileTransferer</a> &amp;&amp;other)</td></tr>
 <tr class="separator:a646beceb6f21ba288fa96de36d406571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +139,13 @@ State&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> () const <
 <tr class="memitem:a677fb742951902ebcbb49f0275131ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_file_transferer.html#a677fb742951902ebcbb49f0275131ffd">limitRate</a> (uint64_t rate)</td></tr>
 <tr class="memdesc:a677fb742951902ebcbb49f0275131ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limit the rate of the transfer.  <a href="#a677fb742951902ebcbb49f0275131ffd">More...</a><br/></td></tr>
 <tr class="separator:a677fb742951902ebcbb49f0275131ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f626853c91268a282e103b74b15cbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1f626853c91268a282e103b74b15cbc"></a>
+virtual <a class="el" href="structgiga_1_1core_1_1_file_transferer_1_1_progress.html">FileTransferer::Progress</a>&#160;</td><td class="memItemRight" valign="bottom"><b>progress</b> () const =0</td></tr>
+<tr class="separator:af1f626853c91268a282e103b74b15cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759bf89041bd6362ba0a8f7d2eddcd93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a759bf89041bd6362ba0a8f7d2eddcd93"></a>
+virtual const <br class="typebreak"/>
+boost::filesystem::path &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> () const =0</td></tr>
+<tr class="separator:a759bf89041bd6362ba0a8f7d2eddcd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -202,7 +212,7 @@ utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>_error</
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

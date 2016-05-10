@@ -67,17 +67,31 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a952366d6b39af5db3f4b0094ea56146b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a952366d6b39af5db3f4b0094ea56146b"></a>
-typedef std::function&lt; void(<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> <br class="typebreak"/>
-&amp;, uint64_t count, uint64_t <br class="typebreak"/>
-bytes)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressCallback</b></td></tr>
-<tr class="separator:a952366d6b39af5db3f4b0094ea56146b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb8b59517b302b1b85868d6ea2dc056"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bb8b59517b302b1b85868d6ea2dc056"></a>
+typedef std::function&lt; void(<a class="el" href="classgiga_1_1core_1_1_file_transferer.html">FileTransferer</a> <br class="typebreak"/>
+&amp;, <a class="el" href="structgiga_1_1core_1_1_transfer_progress.html">TransferProgress</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgressFct</b></td></tr>
+<tr class="separator:a3bb8b59517b302b1b85868d6ea2dc056"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afddfe945314c65f662faebcab9ef5852"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afddfe945314c65f662faebcab9ef5852"></a>
+typedef std::function&lt; void(const <br class="typebreak"/>
+<a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &amp;, const <br class="typebreak"/>
+boost::filesystem::path &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnDownloadedFct</b></td></tr>
+<tr class="separator:afddfe945314c65f662faebcab9ef5852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63b9f0765e2c3728e8096125e930d64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af63b9f0765e2c3728e8096125e930d64"></a>
+typedef std::function&lt; void(const <br class="typebreak"/>
+<a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &amp;, const <br class="typebreak"/>
+boost::filesystem::path <br class="typebreak"/>
+&amp;, FileDownloader::Action)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnFileDownloadedFct</b></td></tr>
+<tr class="separator:af63b9f0765e2c3728e8096125e930d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586a575934e2cf4209f4ea8bcd7ed57a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a586a575934e2cf4209f4ea8bcd7ed57a"></a>
+typedef std::function&lt; void(const <br class="typebreak"/>
+std::string &amp;, std::string &amp;&amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnErrorFct</b></td></tr>
+<tr class="separator:a586a575934e2cf4209f4ea8bcd7ed57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a33f1d2f454b900cac975ade1cf109555"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a33f1d2f454b900cac975ade1cf109555">Downloader</a> (ProgressCallback clb=[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &amp;, uint64_t, uint64_t){})</td></tr>
-<tr class="memdesc:a33f1d2f454b900cac975ade1cf109555"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>  <a href="#a33f1d2f454b900cac975ade1cf109555">More...</a><br/></td></tr>
-<tr class="separator:a33f1d2f454b900cac975ade1cf109555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c4e238af062abfd48cb8c9e2d97436"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a61c4e238af062abfd48cb8c9e2d97436">Downloader</a> (const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;app)</td></tr>
+<tr class="memdesc:a61c4e238af062abfd48cb8c9e2d97436"><td class="mdescLeft">&#160;</td><td class="mdescRight">construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a>  <a href="#a61c4e238af062abfd48cb8c9e2d97436">More...</a><br/></td></tr>
+<tr class="separator:a61c4e238af062abfd48cb8c9e2d97436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a4ec6486127c15f4712009173fa5a3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a4ec6486127c15f4712009173fa5a3f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Downloader</b> (<a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a2a4ec6486127c15f4712009173fa5a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -90,27 +104,65 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c9dfd24f78db5454ecebb259c182e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c9dfd24f78db5454ecebb259c182e41"></a>
 <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a1c9dfd24f78db5454ecebb259c182e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b130f353319ee96fada0226dbfb7001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a6b130f353319ee96fada0226dbfb7001">setDownloadProgressFct</a> (ProgressFct fct)</td></tr>
+<tr class="memdesc:a6b130f353319ee96fada0226dbfb7001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a callback to follow the download progress.  <a href="#a6b130f353319ee96fada0226dbfb7001">More...</a><br/></td></tr>
+<tr class="separator:a6b130f353319ee96fada0226dbfb7001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae979ea43ef42da6773ac12948fb66b66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae979ea43ef42da6773ac12948fb66b66"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnDownloadedFct</b> (OnDownloadedFct fct)</td></tr>
+<tr class="separator:ae979ea43ef42da6773ac12948fb66b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17e00fa6e681b91e5b69e85f10931b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17e00fa6e681b91e5b69e85f10931b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnFileDownloadedFct</b> (OnFileDownloadedFct fct)</td></tr>
+<tr class="separator:aa17e00fa6e681b91e5b69e85f10931b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b99b9be2da0ef96003fff306a02445"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23b99b9be2da0ef96003fff306a02445"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnErrorFct</b> (OnErrorFct fct)</td></tr>
+<tr class="separator:a23b99b9be2da0ef96003fff306a02445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a2944ba0b9ec87f16d2d285bfe77851b6">addDownload</a> (std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">Node</a> &gt; &amp;&amp;node, const boost::filesystem::path &amp;path)</td></tr>
 <tr class="memdesc:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a file or folder to the list of download  <a href="#a2944ba0b9ec87f16d2d285bfe77851b6">More...</a><br/></td></tr>
 <tr class="separator:a2944ba0b9ec87f16d2d285bfe77851b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a8e757a3853c5b1c54a3125b3fd1af79e">downloadingFile</a> ()</td></tr>
-<tr class="memdesc:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>.  <a href="#a8e757a3853c5b1c54a3125b3fd1af79e">More...</a><br/></td></tr>
-<tr class="separator:a8e757a3853c5b1c54a3125b3fd1af79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acedf4ab273371b76d15d5939438d10ff"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#acedf4ab273371b76d15d5939438d10ff">downloadingFileNumber</a> ()</td></tr>
-<tr class="separator:acedf4ab273371b76d15d5939438d10ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac89b0c83e01800be79c50d3156b94415"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89b0c83e01800be79c50d3156b94415"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ac89b0c83e01800be79c50d3156b94415">start</a> ()</td></tr>
-<tr class="memdesc:ac89b0c83e01800be79c50d3156b94415"><td class="mdescLeft">&#160;</td><td class="mdescRight">start the uploading process <br/></td></tr>
+<tr class="memdesc:ac89b0c83e01800be79c50d3156b94415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the uploading process. <br/></td></tr>
 <tr class="separator:ac89b0c83e01800be79c50d3156b94415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62dc5215ef135a48250b5fda6edf9570"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62dc5215ef135a48250b5fda6edf9570"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a62dc5215ef135a48250b5fda6edf9570">join</a> ()</td></tr>
-<tr class="memdesc:a62dc5215ef135a48250b5fda6edf9570"><td class="mdescLeft">&#160;</td><td class="mdescRight">wait for the uploading process to finish <br/></td></tr>
+<tr class="memdesc:a62dc5215ef135a48250b5fda6edf9570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wit for the uploading process to finish. <br/></td></tr>
 <tr class="separator:a62dc5215ef135a48250b5fda6edf9570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a9d0bd45579652639448bd1522e16d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87a9d0bd45579652639448bd1522e16d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a87a9d0bd45579652639448bd1522e16d">kill</a> ()</td></tr>
+<tr class="memdesc:a87a9d0bd45579652639448bd1522e16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel the current download; Clear the queue; stop the process. <br/></td></tr>
+<tr class="separator:a87a9d0bd45579652639448bd1522e16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64e7b619c046c31943d332add9d0220"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ab64e7b619c046c31943d332add9d0220">limitRate</a> (uint64_t rate)</td></tr>
+<tr class="memdesc:ab64e7b619c046c31943d332add9d0220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limit the current download rate.  <a href="#ab64e7b619c046c31943d332add9d0220">More...</a><br/></td></tr>
+<tr class="separator:ab64e7b619c046c31943d332add9d0220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf7818e878cf7e1358e93a2f0bf1817"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaf7818e878cf7e1358e93a2f0bf1817"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#adaf7818e878cf7e1358e93a2f0bf1817">pause</a> ()</td></tr>
+<tr class="memdesc:adaf7818e878cf7e1358e93a2f0bf1817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the current download. Uses <code><a class="el" href="classgiga_1_1core_1_1_downloader.html#a3a0430617c1fd4dc63c77f4544aced45" title="Resume a previously pause()d download. ">resume()</a></code> to restart. <br/></td></tr>
+<tr class="separator:adaf7818e878cf7e1358e93a2f0bf1817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0430617c1fd4dc63c77f4544aced45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a0430617c1fd4dc63c77f4544aced45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a3a0430617c1fd4dc63c77f4544aced45">resume</a> ()</td></tr>
+<tr class="memdesc:a3a0430617c1fd4dc63c77f4544aced45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume a previously <code><a class="el" href="classgiga_1_1core_1_1_downloader.html#adaf7818e878cf7e1358e93a2f0bf1817" title="Pause the current download. Uses resume() to restart. ">pause()</a></code>d download. <br/></td></tr>
+<tr class="separator:a3a0430617c1fd4dc63c77f4544aced45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa57516c8b66d2a28129595cde5368ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#afa57516c8b66d2a28129595cde5368ab">clear</a> ()</td></tr>
+<tr class="memdesc:afa57516c8b66d2a28129595cde5368ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all the files waiting to be process. Only the current downloading file remains. The Error queue is cleared (.  <a href="#afa57516c8b66d2a28129595cde5368ab">More...</a><br/></td></tr>
+<tr class="separator:afa57516c8b66d2a28129595cde5368ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07cd642eccf48a7d0cfb624b34a973d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac07cd642eccf48a7d0cfb624b34a973d"></a>
+FileTransferer::State&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#ac07cd642eccf48a7d0cfb624b34a973d">state</a> ()</td></tr>
+<tr class="memdesc:ac07cd642eccf48a7d0cfb624b34a973d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current download state. <br/></td></tr>
+<tr class="separator:ac07cd642eccf48a7d0cfb624b34a973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61eff9da1e581237a0b7a75fdc47c7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab61eff9da1e581237a0b7a75fdc47c7d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStarted</b> () const </td></tr>
+<tr class="separator:ab61eff9da1e581237a0b7a75fdc47c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7289f270c2654f88acac9175a275fdb9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1core_1_1_downloader.html#a7289f270c2654f88acac9175a275fdb9">downloadingFile</a> ()</td></tr>
+<tr class="memdesc:a7289f270c2654f88acac9175a275fdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>.  <a href="#a7289f270c2654f88acac9175a275fdb9">More...</a><br/></td></tr>
+<tr class="separator:a7289f270c2654f88acac9175a275fdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e647c49235dcf04db6338d34564057"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6e647c49235dcf04db6338d34564057"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>callProgressFct</b> () const </td></tr>
+<tr class="separator:ab6e647c49235dcf04db6338d34564057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Download folders and files. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a33f1d2f454b900cac975ade1cf109555"></a>
+<a class="anchor" id="a61c4e238af062abfd48cb8c9e2d97436"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -120,8 +172,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">giga::core::Downloader::Downloader </td>
           <td>(</td>
-          <td class="paramtype">Downloader::ProgressCallback&#160;</td>
-          <td class="paramname"><em>clb</em> = <code>[](<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&amp;,&#160;uint64_t,&#160;uint64_t){}</code></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -133,13 +185,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>construct a <a class="el" href="classgiga_1_1core_1_1_downloader.html">Downloader</a> </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clb</td><td>a callback function that will be executed periodically to let you know of the download progress.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><code>clb</code> will be called at least once for each file being downloaded. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classgiga_1_1core_1_1_downloader.html#a6b130f353319ee96fada0226dbfb7001" title="Set a callback to follow the download progress. ">setDownloadProgressFct()</a> </dd></dl>
 
 </div>
 </div>
@@ -179,12 +225,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a8e757a3853c5b1c54a3125b3fd1af79e"></a>
+<a class="anchor" id="afa57516c8b66d2a28129595cde5368ab"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a> &gt; giga::core::Downloader::downloadingFile </td>
+          <td class="memname">void giga::core::Downloader::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove all the files waiting to be process. Only the current downloading file remains. The Error queue is cleared (. </p>
+<dl class="section see"><dt>See Also</dt><dd><code>consumeError()</code>) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7289f270c2654f88acac9175a275fdb9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classgiga_1_1core_1_1_file_downloader.html">FileDownloader</a>&gt; giga::core::Downloader::downloadingFile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -198,19 +262,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="acedf4ab273371b76d15d5939438d10ff"></a>
+<a class="anchor" id="ab64e7b619c046c31943d332add9d0220"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t giga::core::Downloader::downloadingFileNumber </td>
+          <td class="memname">void giga::core::Downloader::limitRate </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>rate</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The number of files downloaded + 1 if there is a file currently being downloaded. </dd></dl>
+
+<p>Limit the current download rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rate</td><td>the download rate in Octet/s. Uses 0 for no limit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6b130f353319ee96fada0226dbfb7001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void giga::core::Downloader::setDownloadProgressFct </td>
+          <td>(</td>
+          <td class="paramtype">ProgressFct&#160;</td>
+          <td class="paramname"><em>fct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a callback to follow the download progress. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fct</td><td>a callback function that will be called periodically to let you know of the download progress</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><code>fct</code> will be called :</p>
+<ul>
+<li>At the beginning of the download for each file</li>
+<li>For long download it is called periodically.</li>
+</ul>
+<p>You should not do any long lasting computation in this function. </p>
 
 </div>
 </div>
@@ -227,7 +329,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -114,15 +114,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae98bf73e80014c6163d69ad81468bdef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae98bf73e80014c6163d69ad81468bdef"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>User</b> (const <a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;)=default</td></tr>
 <tr class="separator:ae98bf73e80014c6163d69ad81468bdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2dad73a46c5039d219b4be479d6c7e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2dad73a46c5039d219b4be479d6c7e1"></a>
-<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;)=default</td></tr>
-<tr class="separator:aa2dad73a46c5039d219b4be479d6c7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5737566bb5c7cf7605ee9ca95b612b43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5737566bb5c7cf7605ee9ca95b612b43"></a>
-<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a5737566bb5c7cf7605ee9ca95b612b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a792906cebe9ec537a82b56a45139c6af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a792906cebe9ec537a82b56a45139c6af"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>User</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_user.html">data::User</a> &gt; u, std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_users_relation.html">data::UsersRelation</a> &gt; r=nullptr)</td></tr>
-<tr class="separator:a792906cebe9ec537a82b56a45139c6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c288000dab4a6eaaa57652c94eb777d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c288000dab4a6eaaa57652c94eb777d"></a>
+<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;)</td></tr>
+<tr class="separator:a6c288000dab4a6eaaa57652c94eb777d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bfc23d3e9fbe9ccb2f7f4e05ded4fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9bfc23d3e9fbe9ccb2f7f4e05ded4fb"></a>
+<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classgiga_1_1core_1_1_user.html">User</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="separator:ac9bfc23d3e9fbe9ccb2f7f4e05ded4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fd72c62820399561de90e181abca1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36fd72c62820399561de90e181abca1d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>User</b> (std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_user.html">data::User</a> &gt; u, const <a class="el" href="classgiga_1_1_application.html">Application</a> &amp;app, std::shared_ptr&lt; <a class="el" href="structgiga_1_1data_1_1_users_relation.html">data::UsersRelation</a> &gt; r=nullptr)</td></tr>
+<tr class="separator:a36fd72c62820399561de90e181abca1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84904ba3755f7edccbca832667670b1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84904ba3755f7edccbca832667670b1f"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> () const </td></tr>
 <tr class="separator:a84904ba3755f7edccbca832667670b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -381,7 +381,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>giga::Application</b
 
 <p>Get the personal data of the currentUser. </p>
 <p>Make sure this user <code><a class="el" href="classgiga_1_1core_1_1_user.html#a91c5d5ca35fbd97916d1156eb65084a2">hasPersonalData()</a></code>. <br/>
- To get the currentUser uses <code><a class="el" href="classgiga_1_1_application.html#a9b3468b62b7dee8efe873ac2f70a02e2">Application::currentUser()</a></code>.</p>
+ To get the currentUser uses <code><a class="el" href="classgiga_1_1_application.html#a7a0164b87a4eecb3f8e1431ae630a354">Application::currentUser()</a></code>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classgiga_1_1_error_exception.html">ErrorException</a></td><td>if there is no personalData. </td></tr>
@@ -502,7 +502,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>giga::Application</b
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

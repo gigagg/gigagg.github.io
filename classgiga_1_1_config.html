@@ -56,7 +56,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classgiga_1_1_config-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">giga::Config Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -93,12 +93,66 @@ const utility::string_t &amp;&#160;</td><td class="memItemRight" valign="bottom"
 const utility::string_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>apiHost</b> () const </td></tr>
 <tr class="separator:a8a5be6975488f1e46bcf950443d228af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23f25bcc02a0e94c2f5a4188496b04d0"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Application</b></td></tr>
-<tr class="separator:a23f25bcc02a0e94c2f5a4188496b04d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2f98ebc9bd17613f2f319ed06c7382d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classgiga_1_1_config.html">Config</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_config.html#a2f98ebc9bd17613f2f319ed06c7382d2">init</a> (utility::string_t &amp;&amp;appRedirectUri, utility::string_t &amp;&amp;appId, utility::string_t &amp;&amp;appKey, utility::string_t &amp;&amp;appScope=U(&quot;basic network groups files basic:write network:write groups:write files:write&quot;))</td></tr>
+<tr class="memdesc:a2f98ebc9bd17613f2f319ed06c7382d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the GiGaSdk configuration.  <a href="#a2f98ebc9bd17613f2f319ed06c7382d2">More...</a><br/></td></tr>
+<tr class="separator:a2f98ebc9bd17613f2f319ed06c7382d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dde818c3a6b2f70ff5272d4baef5341"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2dde818c3a6b2f70ff5272d4baef5341"></a>
+static <a class="el" href="classgiga_1_1_config.html">Config</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
+<tr class="separator:a2dde818c3a6b2f70ff5272d4baef5341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2f98ebc9bd17613f2f319ed06c7382d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgiga_1_1_config.html">Config</a> &amp; giga::Config::init </td>
+          <td>(</td>
+          <td class="paramtype">utility::string_t &amp;&amp;&#160;</td>
+          <td class="paramname"><em>appRedirectUri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">utility::string_t &amp;&amp;&#160;</td>
+          <td class="paramname"><em>appId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">utility::string_t &amp;&amp;&#160;</td>
+          <td class="paramname"><em>appKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">utility::string_t &amp;&amp;&#160;</td>
+          <td class="paramname"><em>appScope</em> = <code>U(&quot;basic&#160;network&#160;groups&#160;files&#160;basic:write&#160;network:write&#160;groups:write&#160;files:write&quot;)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the GiGaSdk configuration. </p>
+<p>Create an apps at <a href="https://giga.gg/app">https://giga.gg/app</a> to get an appId, and appKey. <br/>
+ </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/thomas/code/GiGaSdk/src/giga/<a class="el" href="_config_8h_source.html">Config.h</a></li>
 </ul>
@@ -111,7 +165,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Application</b></td>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 25 2016 13:53:32 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
