@@ -68,6 +68,8 @@
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_giga_api_1_1_groups_api.html">GroupsApi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_giga_api_1_1_misc_api.html">MiscApi</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_giga_api_1_1_network_api.html">NetworkApi</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_giga_api_1_1_nodes_api.html">NodesApi</a></td></tr>
@@ -96,13 +98,15 @@ pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 <tr class="memitem:a9efe9f945a413d8d045479ee44a29cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9efe9f945a413d8d045479ee44a29cc7"></a>
 <a class="el" href="structgiga_1_1data_1_1_user.html">data::User</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentUser</b> ()</td></tr>
 <tr class="separator:a9efe9f945a413d8d045479ee44a29cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eaef9acc6146065f9b3a91fcde007a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0eaef9acc6146065f9b3a91fcde007a8"></a>
-const std::shared_ptr<br class="typebreak"/>
-&lt; web::http::oauth2::experimental::oauth2_config &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getOAuthConfig</b> () const </td></tr>
-<tr class="separator:a0eaef9acc6146065f9b3a91fcde007a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d5fb4279755f7cd02b64947c69a95ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d5fb4279755f7cd02b64947c69a95ad"></a>
 pplx::task&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>refreshToken</b> () const </td></tr>
 <tr class="separator:a1d5fb4279755f7cd02b64947c69a95ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161221dc62ad18d999075e7a08276298"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a161221dc62ad18d999075e7a08276298"></a>
+utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>accessToken</b> () const </td></tr>
+<tr class="separator:a161221dc62ad18d999075e7a08276298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591c8a2efecda65d294335545fd9b16a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a591c8a2efecda65d294335545fd9b16a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUserAgent</b> (utility::string_t userAgent)</td></tr>
+<tr class="separator:a591c8a2efecda65d294335545fd9b16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -118,6 +122,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3cdcee247375d2103710cd023b80909b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cdcee247375d2103710cd023b80909b"></a>
 <a class="el" href="classgiga_1_1_giga_api_1_1_users_api.html">UsersApi</a>&#160;</td><td class="memItemRight" valign="bottom"><b>users</b></td></tr>
 <tr class="separator:a3cdcee247375d2103710cd023b80909b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb052efa950adae3b7721b956f2da0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaeb052efa950adae3b7721b956f2da0c"></a>
+<a class="el" href="classgiga_1_1_giga_api_1_1_misc_api.html">MiscApi</a>&#160;</td><td class="memItemRight" valign="bottom"><b>misc</b></td></tr>
+<tr class="separator:aaeb052efa950adae3b7721b956f2da0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/thomas/code/GiGaSdk/src/giga/api/<a class="el" href="_giga_api_8h_source.html">GigaApi.h</a></li>
@@ -132,7 +139,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 28 2016 18:55:59 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

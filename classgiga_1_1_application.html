@@ -124,6 +124,12 @@ std::vector&lt; std::unique_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classgiga_1_1core_1_1_node.html">core::Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgiga_1_1_application.html#a6c8cee4e63645e49c5ef2901a735f198">searchNode</a> (const utility::string_t &amp;search, core::Node::MediaType type) const </td></tr>
 <tr class="memdesc:a6c8cee4e63645e49c5ef2901a735f198"><td class="mdescLeft">&#160;</td><td class="mdescRight">search for a node by its name and type <br/></td></tr>
 <tr class="separator:a6c8cee4e63645e49c5ef2901a735f198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea58a31efd851f5832f7c9bc22b6065"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea58a31efd851f5832f7c9bc22b6065"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>userAgent</b> () const </td></tr>
+<tr class="separator:acea58a31efd851f5832f7c9bc22b6065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a01e51f0545e12c537771ce0d1ef96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4a01e51f0545e12c537771ce0d1ef96"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUserAgent</b> (std::string &amp;&amp;userAgent)</td></tr>
+<tr class="separator:aa4a01e51f0545e12c537771ce0d1ef96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3df2c706487696a5a74bccead6273f2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3df2c706487696a5a74bccead6273f2c"></a>
 const <a class="el" href="classgiga_1_1_giga_api.html">GigaApi</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>api</b> () const </td></tr>
 <tr class="separator:a3df2c706487696a5a74bccead6273f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +142,9 @@ Friends</h2></td></tr>
 <tr class="memitem:a5796ff70f1b5600b5df82d82a196e50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5796ff70f1b5600b5df82d82a196e50f"></a>
 web::uri&#160;</td><td class="memItemRight" valign="bottom"><b>core::FileNodeData::fileUrl</b> () const </td></tr>
 <tr class="separator:a5796ff70f1b5600b5df82d82a196e50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780c186f4dd66c76d653328aaec1adf6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a780c186f4dd66c76d653328aaec1adf6"></a>
+std::unique_ptr&lt; <a class="el" href="classgiga_1_1core_1_1_node.html">core::Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>giga::core::Node::copyOrMoveTo</b> (const FolderNode &amp;node, bool isMove, MergePolicy policy=MergePolicy::renameSource) const </td></tr>
+<tr class="separator:a780c186f4dd66c76d653328aaec1adf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classgiga_1_1_application.html">Application</a> class is the entry point to access the GiGa API. The <a class="el" href="classgiga_1_1_application.html">Application</a> must be authenticated (once and only once). </p>
@@ -469,7 +478,7 @@ web::uri&#160;</td><td class="memItemRight" valign="bottom"><b>core::FileNodeDat
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 28 2016 18:55:59 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

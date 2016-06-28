@@ -81,10 +81,14 @@ pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structgiga_1_1data_1_1_data_node.html">data::DataNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>addFolderNode</b> (const utility::string_t &amp;name, const std::string &amp;parentId) const </td></tr>
 <tr class="separator:a7bd73658de91c6edeceb83fa9277c538"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5534aa625c6f9e9309f611f59515bef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5534aa625c6f9e9309f611f59515bef"></a>
+<tr class="memitem:ab171a1dac415be7abedf79a3f3d64693"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab171a1dac415be7abedf79a3f3d64693"></a>
 pplx::task&lt; std::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="structgiga_1_1data_1_1_data_node.html">data::DataNode</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copyNode</b> (const std::string &amp;fromNodeId, const std::string &amp;toNodeId, const utility::string_t &amp;copy, const utility::string_t &amp;cut, const std::string &amp;myNodeKey, const std::string &amp;otherNodeKey) const </td></tr>
-<tr class="separator:ab5534aa625c6f9e9309f611f59515bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; <a class="el" href="structgiga_1_1data_1_1_id_container.html">data::IdContainer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>copyNode</b> (const std::string &amp;fromNodeId, const std::string &amp;toNodeId, bool isCut, const utility::string_t &amp;mergePolicy, const std::string &amp;myNodeKey, const std::string &amp;otherNodeKey) const </td></tr>
+<tr class="separator:ab171a1dac415be7abedf79a3f3d64693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabccc6ca0787a31edf0dcc35e46e5765"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabccc6ca0787a31edf0dcc35e46e5765"></a>
+pplx::task&lt; std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="structgiga_1_1data_1_1_copy_log.html">data::CopyLog</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCopyLog</b> (const std::string &amp;fromNodeId, const std::string &amp;toNodeId) const </td></tr>
+<tr class="separator:aabccc6ca0787a31edf0dcc35e46e5765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05e63ac013387efdc4d170392dd72c3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05e63ac013387efdc4d170392dd72c3c"></a>
 pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getNodeById</b> (const std::string &amp;nodeId) const </td></tr>
@@ -101,6 +105,10 @@ pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 &lt; std::vector&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getChildrenNode</b> (const std::string &amp;nodeId) const </td></tr>
 <tr class="separator:a3fbfe767f661738ef7903a208c4f9504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadcdddbaf833e1c4be2ae0c1e5edaca3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadcdddbaf833e1c4be2ae0c1e5edaca3"></a>
+pplx::task&lt; std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="structgiga_1_1data_1_1_node.html">data::Node</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getChildrenNodeByName</b> (const std::string &amp;nodeId, const utility::string_t &amp;name) const </td></tr>
+<tr class="separator:aadcdddbaf833e1c4be2ae0c1e5edaca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3df8c9954894ec21c09380471cf34725"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3df8c9954894ec21c09380471cf34725"></a>
 pplx::task&lt; std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="structgiga_1_1data_1_1_preview.html">data::Preview</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPreviewsData</b> (const std::string &amp;nodeId) const </td></tr>
@@ -129,7 +137,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>GigaApi</b></td></tr
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 28 2016 18:55:59 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

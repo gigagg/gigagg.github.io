@@ -91,18 +91,18 @@ template&lt;typename T &gt; </td></tr>
 template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a4dc8efdf5ceca1c4a181610c5370cd93"><td class="memTemplItemLeft" align="right" valign="top">web::uri_builder&#160;</td><td class="memTemplItemRight" valign="bottom"><b>uri</b> (const utility::string_t &amp;resource, const T &amp;id, const utility::string_t &amp;subResource, const U &amp;subId) const </td></tr>
 <tr class="separator:a4dc8efdf5ceca1c4a181610c5370cd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5594c8554254b2119bba16a0efb8ef92"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5594c8554254b2119bba16a0efb8ef92"></a>
+<tr class="memitem:ab422c96812c1389ff2a0eeaa5d5717cd"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab422c96812c1389ff2a0eeaa5d5717cd"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5594c8554254b2119bba16a0efb8ef92"><td class="memTemplItemLeft" align="right" valign="top">pplx::task&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>request</b> (const web::http::method &amp;mtd, web::uri_builder uri)</td></tr>
-<tr class="separator:a5594c8554254b2119bba16a0efb8ef92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dca7d805b0357fe84686e4541ad1fbc"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9dca7d805b0357fe84686e4541ad1fbc"></a>
+<tr class="memitem:ab422c96812c1389ff2a0eeaa5d5717cd"><td class="memTemplItemLeft" align="right" valign="top">pplx::task&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>request</b> (const web::http::method &amp;mtd, web::uri_builder uri)</td></tr>
+<tr class="separator:ab422c96812c1389ff2a0eeaa5d5717cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa611b9408abfeb08de7c07faa895a8b6"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa611b9408abfeb08de7c07faa895a8b6"></a>
 template&lt;typename T , class U &gt; </td></tr>
-<tr class="memitem:a9dca7d805b0357fe84686e4541ad1fbc"><td class="memTemplItemLeft" align="right" valign="top">pplx::task&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>request</b> (const web::http::method &amp;mtd, web::uri_builder uri, U &amp;&amp;bodyData)</td></tr>
-<tr class="separator:a9dca7d805b0357fe84686e4541ad1fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41d1f98b27e7df9c24dd10c9e1f2769"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad41d1f98b27e7df9c24dd10c9e1f2769"></a>
+<tr class="memitem:aa611b9408abfeb08de7c07faa895a8b6"><td class="memTemplItemLeft" align="right" valign="top">pplx::task&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>request</b> (const web::http::method &amp;mtd, web::uri_builder uri, U &amp;&amp;bodyData)</td></tr>
+<tr class="separator:aa611b9408abfeb08de7c07faa895a8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86a1bffd81caa520c684fc59306eb10"><td class="memTemplParams" colspan="2"><a class="anchor" id="ac86a1bffd81caa520c684fc59306eb10"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad41d1f98b27e7df9c24dd10c9e1f2769"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onRequestPtr</b> (web::http::http_response response) const </td></tr>
-<tr class="separator:ad41d1f98b27e7df9c24dd10c9e1f2769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86a1bffd81caa520c684fc59306eb10"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onRequestPtr</b> (web::http::http_response response) const </td></tr>
+<tr class="separator:ac86a1bffd81caa520c684fc59306eb10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335cc2714ddd1be2153e509ba61f508e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a335cc2714ddd1be2153e509ba61f508e"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a335cc2714ddd1be2153e509ba61f508e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onRequest</b> (web::http::http_response response) const </td></tr>
@@ -110,13 +110,15 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a0073e5f034c63ccb76e64e298e4318c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0073e5f034c63ccb76e64e298e4318c9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>throwHttpError</b> (unsigned short status, web::json::value &amp;&amp;json) const </td></tr>
 <tr class="separator:a0073e5f034c63ccb76e64e298e4318c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11324def608f4d962897d2b06dd77bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad11324def608f4d962897d2b06dd77bb"></a>
-const <br class="typebreak"/>
-web::http::client::http_client &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>http</b> () const </td></tr>
-<tr class="separator:ad11324def608f4d962897d2b06dd77bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22f1bdc6d74bda3d0a5d2476f1c941f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22f1bdc6d74bda3d0a5d2476f1c941f8"></a>
 pplx::task&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>refreshToken</b> ()</td></tr>
 <tr class="separator:a22f1bdc6d74bda3d0a5d2476f1c941f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a71dbea17250c7b17b76055a658746"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51a71dbea17250c7b17b76055a658746"></a>
+utility::string_t&#160;</td><td class="memItemRight" valign="bottom"><b>accessToken</b> () const </td></tr>
+<tr class="separator:a51a71dbea17250c7b17b76055a658746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ada7df3f9ef06c700c2c6ab23a8034"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4ada7df3f9ef06c700c2c6ab23a8034"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUserAgent</b> (utility::string_t userAgent)</td></tr>
+<tr class="separator:ae4ada7df3f9ef06c700c2c6ab23a8034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -140,7 +142,7 @@ static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>JSON
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 10 2016 17:45:08 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 28 2016 18:55:59 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

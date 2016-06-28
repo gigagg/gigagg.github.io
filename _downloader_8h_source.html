@@ -98,7 +98,7 @@
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(FileTransferer&amp;, TransferProgress)&gt;           ProgressFct;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(const Node&amp;, const boost::filesystem::path&amp;)&gt; OnDownloadedFct;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(const Node&amp;, const boost::filesystem::path&amp;, FileDownloader::Action)&gt; OnFileDownloadedFct;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(<span class="keyword">const</span> std::string&amp; <span class="comment">/*id*/</span>, std::string&amp;&amp;)&gt;    OnErrorFct;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">typedef</span> std::function&lt;void(<span class="keyword">const</span> std::string&amp; <span class="comment">/*id*/</span>, <span class="keyword">const</span> utility::string_t&amp; <span class="comment">/*name*/</span>, std::string&amp;&amp;)&gt; OnErrorFct;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classgiga_1_1core_1_1_downloader.html#a61c4e238af062abfd48cb8c9e2d97436">Downloader</a>(<span class="keyword">const</span> <a class="code" href="classgiga_1_1_application.html">Application</a>&amp; app);</div>
@@ -162,37 +162,40 @@
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    downloadNode (<a class="code" href="classgiga_1_1core_1_1_node.html">Node</a>&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;std::unique_ptr&lt;Node&gt;, <span class="keyword">const</span> boost::filesystem::path&gt; QueueElement;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue&lt;std::unique_ptr&lt;QueueElement&gt;</a>&gt; <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>                           _queue;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    pplx::task&lt;void&gt;                _mainTask;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">bool</span>                            _isStarted;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    std::atomic&lt;bool&gt;               _isFinished;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">mutable</span> std::mutex              _mut;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    std::shared_ptr&lt;FileDownloader&gt; _downloading;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="structgiga_1_1core_1_1_transfer_progress.html">TransferProgress</a>                _progress;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    ProgressFct                     _progressCallback;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    OnDownloadedFct                 _onDownloadedFct;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    OnFileDownloadedFct             _onFileDownloadedFct;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    OnErrorFct                      _onErrorFct;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    uint64_t                        _rate;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">bool</span>                            _isPaused;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::atomic&lt;int&gt;                _clearing;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">const</span> <a class="code" href="classgiga_1_1_application.html">Application</a>*              _app;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    pplx::cancellation_token_source _cts;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;} <span class="comment">/* namespace core */</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    doDownloadNode (<a class="code" href="classgiga_1_1core_1_1_node.html">Node</a>&amp; node, <span class="keyword">const</span> boost::filesystem::path&amp; path);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;std::unique_ptr&lt;Node&gt;, <span class="keyword">const</span> boost::filesystem::path&gt; QueueElement;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">moodycamel::BlockingReaderWriterQueue&lt;std::unique_ptr&lt;QueueElement&gt;</a>&gt; <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classmoodycamel_1_1_blocking_reader_writer_queue.html">Queue</a>                           _queue;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    pplx::task&lt;void&gt;                _mainTask;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">bool</span>                            _isStarted;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    std::atomic&lt;bool&gt;               _isFinished;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">mutable</span> std::mutex              _mut;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    std::shared_ptr&lt;FileDownloader&gt; _downloading;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="structgiga_1_1core_1_1_transfer_progress.html">TransferProgress</a>                _progress;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    ProgressFct                     _progressCallback;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    OnDownloadedFct                 _onDownloadedFct;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    OnFileDownloadedFct             _onFileDownloadedFct;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    OnErrorFct                      _onErrorFct;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    uint64_t                        _rate;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">bool</span>                            _isPaused;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::atomic&lt;int&gt;                _clearing;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">const</span> <a class="code" href="classgiga_1_1_application.html">Application</a>*              _app;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    pplx::cancellation_token_source _cts;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;};</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_DOWNLOADER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;} <span class="comment">/* namespace core */</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;} <span class="comment">/* namespace giga */</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GIGA_CORE_DOWNLOADER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classgiga_1_1core_1_1_downloader_html"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html">giga::core::Downloader</a></div><div class="ttdef"><b>Definition:</b> Downloader.h:41</div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a7289f270c2654f88acac9175a275fdb9"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a7289f270c2654f88acac9175a275fdb9">giga::core::Downloader::downloadingFile</a></div><div class="ttdeci">std::shared_ptr&lt; FileDownloader &gt; downloadingFile()</div><div class="ttdoc">Gets the current FileDownloader. </div></div>
 <div class="ttc" id="classgiga_1_1core_1_1_downloader_html_a3a0430617c1fd4dc63c77f4544aced45"><div class="ttname"><a href="classgiga_1_1core_1_1_downloader.html#a3a0430617c1fd4dc63c77f4544aced45">giga::core::Downloader::resume</a></div><div class="ttdeci">void resume()</div><div class="ttdoc">Resume a previously pause()d download. </div></div>
@@ -219,7 +222,7 @@
 </div>
 </div>
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 10 2016 17:45:07 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 28 2016 18:55:59 for GiGaSdk by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
